@@ -5,7 +5,10 @@ import About from './pages/About';
 import Services from './pages/Services';
 import Faqs from './pages/Faqs';
 import Blogs from './pages/Blogs';
+import BlogDetail from './pages/BlogDetail';
 import Contact from './pages/Contact';
+import PrivacyPolicy from './pages/PrivacyPolicy';
+import TermsOfService from './pages/TermsOfService';
 
 // 404 Page Component
 const NotFound = () => {
@@ -50,7 +53,10 @@ function App() {
           <Route path="/services" element={<Services />} />
           <Route path="/faqs" element={<Faqs />} />
           <Route path="/blogs" element={<Blogs />} />
+          <Route path="/blog/:slug" element={<BlogDetail />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/privacy-policy" element={<PrivacyPolicy />} />
+          <Route path="/terms-of-service" element={<TermsOfService />} />
           {/* Catch all route for 404 */}
           <Route path="*" element={<NotFound />} />
         </Routes>

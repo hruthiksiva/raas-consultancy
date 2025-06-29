@@ -1,7 +1,8 @@
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
+  const navigate = useNavigate();
 
   const footerLinks = [
     { path: '/', label: 'Home' },
@@ -11,6 +12,16 @@ const Footer = () => {
     { path: '/blogs', label: 'Blogs' },
     { path: '/contact', label: 'Contact Us' },
   ];
+
+  const handleLinkClick = (path) => {
+    navigate(path);
+    // Scroll to top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
+  const handleMapClick = () => {
+    window.open('https://maps.app.goo.gl/25GeRGT7Pt1iKEE58', '_blank');
+  };
 
   return (
     <footer className="bg-gray-800 text-white">
@@ -51,25 +62,69 @@ const Footer = () => {
             <ul className="space-y-2">
               {footerLinks.map((link) => (
                 <li key={link.path}>
-                  <Link
-                    to={link.path}
-                    className="text-gray-300 hover:text-white transition-colors duration-200"
+                  <button
+                    onClick={() => handleLinkClick(link.path)}
+                    className="text-gray-300 hover:text-white transition-colors duration-200 text-left"
                   >
                     {link.label}
-                  </Link>
+                  </button>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
+          {/* Contact Info with Map */}
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Info</h3>
-            <div className="space-y-2 text-gray-300">
-              <p>📍 123 Business Street</p>
-              <p>City, State 12345</p>
-              <p>📧 info@raasconsulting.com</p>
-              <p>📞 (555) 123-4567</p>
+            <div className="space-y-4">
+              {/* Map and Address */}
+              <div className="flex items-start space-x-3">
+                {/* Map Box */}
+                <div 
+                  className="w-20 h-20 bg-gray-600 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-500 transition-colors duration-200 flex-shrink-0"
+                  onClick={handleMapClick}
+                  title="Click to open in Google Maps"
+                >
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
+                  </svg>
+                </div>
+                
+                {/* Address */}
+                <div 
+                  className="text-gray-300 cursor-pointer hover:text-white transition-colors duration-200"
+                  onClick={handleMapClick}
+                  title="Click to open in Google Maps"
+                >
+                  <p className="text-sm leading-relaxed">
+                    3-220/1 Pagadamanu Street<br />
+                    Greamspet, Chittoor<br />
+                    517002
+                  </p>
+                </div>
+              </div>
+
+              {/* Phone and Email */}
+              <div className="space-y-2 text-gray-300">
+                <p className="flex items-center">
+                  <span className="mr-2">📞</span>
+                  <a 
+                    href="tel:+918688196461" 
+                    className="hover:text-white transition-colors duration-200"
+                  >
+                    +91 86881 96461
+                  </a>
+                </p>
+                <p className="flex items-center">
+                  <span className="mr-2">📧</span>
+                  <a 
+                    href="mailto:info@raasconsulting.com" 
+                    className="hover:text-white transition-colors duration-200"
+                  >
+                    info@raasconsulting.com
+                  </a>
+                </p>
+              </div>
             </div>
           </div>
         </div>
@@ -81,12 +136,18 @@ const Footer = () => {
               © {currentYear} RAAS Consulting. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
-              <Link to="/about" className="text-gray-300 hover:text-white text-sm transition-colors duration-200">
+              <button
+                onClick={() => handleLinkClick('/privacy-policy')}
+                className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
+              >
                 Privacy Policy
-              </Link>
-              <Link to="/about" className="text-gray-300 hover:text-white text-sm transition-colors duration-200">
+              </button>
+              <button
+                onClick={() => handleLinkClick('/terms-of-service')}
+                className="text-gray-300 hover:text-white text-sm transition-colors duration-200"
+              >
                 Terms of Service
-              </Link>
+              </button>
             </div>
           </div>
         </div>

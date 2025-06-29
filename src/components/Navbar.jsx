@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const location = useLocation();
+  const navigate = useNavigate();
 
   const navItems = [
     { path: '/', label: 'Home' },
@@ -15,6 +16,17 @@ const Navbar = () => {
   ];
 
   const isActive = (path) => location.pathname === path;
+
+  const handleNavClick = (path) => {
+    // Close mobile menu
+    setIsMenuOpen(false);
+    
+    // Navigate to the page
+    navigate(path);
+    
+    // Scroll to top of the page
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   // Close mobile menu when route changes
   useEffect(() => {
@@ -29,8 +41,22 @@ const Navbar = () => {
       }
     };
 
+    // Add event listener for clicks outside navbar
     document.addEventListener('mousedown', handleClickOutside);
-    return () => document.removeEventListener('mousedown', handleClickOutside);
+    
+    // Add event listener for escape key
+    const handleEscapeKey = (event) => {
+      if (event.key === 'Escape' && isMenuOpen) {
+        setIsMenuOpen(false);
+      }
+    };
+    
+    document.addEventListener('keydown', handleEscapeKey);
+
+    return () => {
+      document.removeEventListener('mousedown', handleClickOutside);
+      document.removeEventListener('keydown', handleEscapeKey);
+    };
   }, [isMenuOpen]);
 
   return (
@@ -39,20 +65,20 @@ const Navbar = () => {
         <div className="flex justify-between h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <Link 
-              to="/" 
+            <button 
+              onClick={() => handleNavClick('/')}
               className="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity duration-200"
             >
               <span className="text-xl font-bold text-gray-800">RAAS Consulting</span>
-            </Link>
+            </button>
           </div>
 
           {/* Desktop Navigation */}
           <div className="hidden md:flex items-center space-x-1">
             {navItems.map((item) => (
-              <Link
+              <button
                 key={item.path}
-                to={item.path}
+                onClick={() => handleNavClick(item.path)}
                 className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
                   isActive(item.path)
                     ? 'text-blue-600 bg-blue-50 border-b-2 border-blue-600'
@@ -60,7 +86,7 @@ const Navbar = () => {
                 }`}
               >
                 {item.label}
-              </Link>
+              </button>
             ))}
           </div>
 
@@ -70,6 +96,7 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-gray-600 hover:text-blue-600 hover:bg-blue-50 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-500 transition-colors duration-200"
               aria-label="Toggle navigation menu"
+              aria-expanded={isMenuOpen}
             >
               <span className="sr-only">Open main menu</span>
               {/* Hamburger icon */}
@@ -101,18 +128,17 @@ const Navbar = () => {
       <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden bg-white border-t border-gray-200 shadow-lg`}>
         <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
           {navItems.map((item) => (
-            <Link
+            <button
               key={item.path}
-              to={item.path}
-              onClick={() => setIsMenuOpen(false)}
-              className={`block px-3 py-3 rounded-md text-base font-medium transition-all duration-200 ${
+              onClick={() => handleNavClick(item.path)}
+              className={`block w-full text-left px-3 py-3 rounded-md text-base font-medium transition-all duration-200 ${
                 isActive(item.path)
                   ? 'text-blue-600 bg-blue-50 border-l-4 border-blue-600'
                   : 'text-gray-600 hover:text-blue-600 hover:bg-blue-50 hover:border-l-4 hover:border-blue-300'
               }`}
             >
               {item.label}
-            </Link>
+            </button>
           ))}
         </div>
       </div>
