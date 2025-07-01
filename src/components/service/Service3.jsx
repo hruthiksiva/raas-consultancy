@@ -39,13 +39,13 @@ const Service3 = () => {
             </a>
           </div>
           <div className="relative">
-            <div className="bg-gradient-to-br from-purple-500 to-purple-600 rounded-2xl p-8 text-white">
+          <div className="rounded-2xl p-8">
               <div className="w-full h-80 bg-white/20 rounded-lg flex items-center justify-center">
                 <span className="text-white/80 text-lg">{data.imageLabel}</span>
               </div>
             </div>
           </div>
-        </div>
+        </div> 
       </div>
     </section>
   );

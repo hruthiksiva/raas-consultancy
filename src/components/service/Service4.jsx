@@ -16,7 +16,7 @@ const Service4 = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
-            <div className="bg-gradient-to-br from-orange-500 to-orange-600 rounded-2xl p-8 text-white">
+          <div className="rounded-2xl p-8">
               <div className="w-full h-80 bg-white/20 rounded-lg flex items-center justify-center">
                 <span className="text-white/80 text-lg">{data.imageLabel}</span>
               </div>

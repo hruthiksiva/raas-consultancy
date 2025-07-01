@@ -38,7 +38,7 @@ const Service1 = () => {
             </a>
           </div>
           <div className="relative">
-            <div className="bg-gradient-to-br from-blue-500 to-blue-600 rounded-2xl p-8 text-white">
+            <div className="rounded-2xl p-8">
               <div className="w-full h-80 rounded-lg flex items-center justify-center overflow-hidden">
                 <img src={Service1Pic} alt={data.imageLabel} className="object-cover w-full h-full rounded-lg" />
               </div>
