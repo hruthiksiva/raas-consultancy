@@ -12,15 +12,15 @@ const Service3 = () => {
   if (!data) return null;
 
   return (
-    <section id="service3" className="py-16 md:py-24 bg-white">
+    <section id="service3" className="py-16 md:py-24" style={{ backgroundColor: '#182028' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div>
             <div className={`w-16 h-16 ${data.iconBg} rounded-xl flex items-center justify-center mb-6`}>
               <div className={`w-8 h-8 ${data.iconInner} rounded`}></div>
             </div>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{data.title}</h2>
-            <p className="text-lg text-gray-700 mb-8 leading-relaxed">{data.description}</p>
+            <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#F1E1C9' }}>{data.title}</h2>
+            <p className="text-lg mb-8 leading-relaxed" style={{ color: '#FFFFFF' }}>{data.description}</p>
             <div className="space-y-4 mb-8">
               {data.features.map((feature, idx) => (
                 <div className="flex items-start" key={idx}>
@@ -28,13 +28,13 @@ const Service3 = () => {
                     <div className={`w-2 h-2 ${data.iconInner} rounded-full`}></div>
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900">{feature.title}</h3>
-                    <p className="text-gray-600">{feature.description}</p>
+                    <h3 className="font-semibold" style={{ color: '#F1E1C9' }}>{feature.title}</h3>
+                    <p style={{ color: '#FFFFFF' }}>{feature.description}</p>
                   </div>
                 </div>
               ))}
             </div>
-            <a href={data.ctaLink} className="inline-block bg-purple-600 text-white px-8 py-4 rounded-lg font-semibold hover:bg-purple-700 transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1">
+            <a href={data.ctaLink} className="inline-block px-8 py-4 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1" style={{ backgroundColor: '#B69567', color: '#FFFFFF' }}>
               {data.cta}
             </a>
           </div>
