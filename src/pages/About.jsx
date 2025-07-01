@@ -3,6 +3,7 @@ import OurStorySection from '../components/about/OurStorySection';
 import MissionVisionSection from '../components/about/MissionVisionSection';
 import WhyChooseUsSection from '../components/about/WhyChooseUsSection';
 import FoundersNoteSection from '../components/about/FoundersNoteSection';
+import FinalCTASection from '../components/home/FinalCTASection';
 
 const About = () => {
   return (
@@ -12,6 +13,7 @@ const About = () => {
       <MissionVisionSection />
       <WhyChooseUsSection />
       <FoundersNoteSection />
+      <FinalCTASection />
     </div>
   );
 };
