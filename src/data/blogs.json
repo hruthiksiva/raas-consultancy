@@ -1,0 +1,38 @@
+[
+  {
+    "id": 1,
+    "title": "Taxation Tips",
+    "excerpt": "Essential tax planning strategies for businesses and individuals to maximize savings and ensure compliance.",
+    "image": "taxation-tips",
+    "slug": "taxation-tips",
+    "category": "Tax Planning",
+    "readTime": "5 min read"
+  },
+  {
+    "id": 2,
+    "title": "Compliance Simplified",
+    "excerpt": "Streamlined compliance processes for MSMEs and startups to meet regulatory requirements efficiently.",
+    "image": "compliance-simplified",
+    "slug": "compliance-simplified",
+    "category": "Compliance",
+    "readTime": "4 min read"
+  },
+  {
+    "id": 3,
+    "title": "Startup Finance",
+    "excerpt": "Financial management strategies and funding options for early-stage startups and entrepreneurs.",
+    "image": "startup-finance",
+    "slug": "startup-finance",
+    "category": "Startup",
+    "readTime": "6 min read"
+  },
+  {
+    "id": 4,
+    "title": "Expert Advice",
+    "excerpt": "Professional insights and best practices from our Chartered professionals for business growth.",
+    "image": "expert-advice",
+    "slug": "expert-advice",
+    "category": "Advisory",
+    "readTime": "7 min read"
+  }
+] 
