@@ -1,5 +1,5 @@
-import USPCard from './USPCard';
-import uspsData from '../data/usps.json';
+import USPCard from '../USPCard';
+import uspsData from '../../data/usps.json';
 
 const USPSection = ({ 
   className = "",
