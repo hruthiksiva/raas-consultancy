@@ -18,7 +18,7 @@ const Blogs = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div className="min-h-screen" style={{ backgroundColor: '#B69567' }}>
       {/* Hero Section */}
       <BlogsHeroSection 
         title="Blog" 
