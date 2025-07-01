@@ -1,76 +1,7 @@
-import { useState } from 'react';
 import Header from '../components/Header';
+import FaqAccordion from '../components/faqs/FaqAccordion';
 
 const Faqs = () => {
-  const [openFaq, setOpenFaq] = useState(null);
-
-  const faqs = [
-    {
-      id: 1,
-      question: "Do you work with freelancers, startups, and individuals?",
-      answer: "Yes, we specialize in serving freelancers, MSMEs, startups, and Pvt Ltd companies. We tailor our services to your unique compliance needs and business scale."
-    },
-    {
-      id: 2,
-      question: "What industries do you work with?",
-      answer: "From tech startups to service providers, retail, export/import businesses, and professionals like doctors and architects — we work with a wide spectrum of clients."
-    },
-    {
-      id: 3,
-      question: "Is my data safe with Raaz Consultancy?",
-      answer: "Absolutely. Confidentiality is a core value. Your documents and data are stored securely in encrypted, cloud-based environments."
-    },
-    {
-      id: 4,
-      question: "What is your pricing model?",
-      answer: "We offer fixed-price services with clear deliverables — no hidden fees, no retainers."
-    },
-    {
-      id: 5,
-      question: "How soon can I get started?",
-      answer: "Right away! Book a free consultation, and we'll assess your needs and start the onboarding process within 24 hours."
-    },
-    {
-      id: 6,
-      question: "Do you handle IEC code registration?",
-      answer: "Yes, we provide complete IEC (Import Export Code) registration services for businesses engaged in international trade. This includes application processing, documentation, and ongoing compliance support."
-    },
-    {
-      id: 7,
-      question: "Do you assist with GST filings for LLPs?",
-      answer: "Absolutely! We handle all GST-related services for LLPs including registration, monthly/quarterly returns, reconciliation, and compliance management. Our team ensures timely and accurate filings."
-    },
-    {
-      id: 8,
-      question: "What documents do I need for company incorporation?",
-      answer: "For company incorporation, you'll need identity proofs, address proofs, PAN cards, and business-related documents. We provide a complete checklist and guide you through the entire process step by step."
-    },
-    {
-      id: 9,
-      question: "Do you provide virtual CFO services?",
-      answer: "Yes, we offer comprehensive virtual CFO services including financial planning, cash flow management, strategic advisory, and board reporting. Our experienced professionals act as your extended finance team."
-    },
-    {
-      id: 10,
-      question: "How do you handle TDS compliance?",
-      answer: "We manage complete TDS compliance including calculation, deduction, payment, and filing of returns. Our team ensures accurate TDS processing and timely submissions to avoid penalties."
-    },
-    {
-      id: 11,
-      question: "Can you help with MSME registration?",
-      answer: "Yes, we provide complete MSME registration services including Udyam registration, documentation, and ongoing compliance support. We help you avail all MSME benefits and schemes."
-    },
-    {
-      id: 12,
-      question: "What is included in your bookkeeping services?",
-      answer: "Our bookkeeping services include monthly financial record maintenance, bank reconciliation, expense categorization, financial reporting, and audit-ready documentation. We use cloud-based tools for real-time access."
-    }
-  ];
-
-  const toggleFaq = (id) => {
-    setOpenFaq(openFaq === id ? null : id);
-  };
-
   return (
     <div className="min-h-screen">
       {/* Hero Header */}
@@ -92,50 +23,7 @@ const Faqs = () => {
           </div>
 
           {/* FAQs Accordion */}
-          <div className="space-y-4">
-            {faqs.map((faq) => (
-              <div 
-                key={faq.id}
-                className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden"
-              >
-                <button
-                  onClick={() => toggleFaq(faq.id)}
-                  className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
-                >
-                  <h3 className="text-lg font-semibold text-gray-900 pr-4">
-                    {faq.question}
-                  </h3>
-                  <div className="flex-shrink-0">
-                    <svg
-                      className={`w-6 h-6 text-gray-500 transform transition-transform duration-200 ${
-                        openFaq === faq.id ? 'rotate-180' : ''
-                      }`}
-                      fill="none"
-                      stroke="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path
-                        strokeLinecap="round"
-                        strokeLinejoin="round"
-                        strokeWidth={2}
-                        d="M19 9l-7 7-7-7"
-                      />
-                    </svg>
-                  </div>
-                </button>
-                
-                {openFaq === faq.id && (
-                  <div className="px-6 pb-6">
-                    <div className="border-t border-gray-100 pt-4">
-                      <p className="text-gray-700 leading-relaxed">
-                        {faq.answer}
-                      </p>
-                    </div>
-                  </div>
-                )}
-              </div>
-            ))}
-          </div>
+          <FaqAccordion />
 
           {/* Contact CTA */}
           <div className="mt-16 text-center">
