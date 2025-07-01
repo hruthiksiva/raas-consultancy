@@ -19,13 +19,14 @@ const FaqAccordion = () => {
       {faqs.map((faq) => (
         <div 
           key={faq.id}
-          className="bg-white rounded-xl shadow-sm border border-gray-200 overflow-hidden"
+          className="rounded-xl shadow-sm border border-gray-200 overflow-hidden"
+          style={{ backgroundColor: '#B69567' }}
         >
           <button
             onClick={() => toggleFaq(faq.id)}
             className="w-full px-6 py-6 text-left flex items-center justify-between hover:bg-gray-50 transition-colors duration-200"
           >
-            <h3 className="text-lg font-semibold text-gray-900 pr-4">
+            <h3 className="text-lg font-semibold pr-4" style={{ color: '#182028' }}>
               {faq.question}
             </h3>
             <div className="flex-shrink-0">
@@ -49,7 +50,7 @@ const FaqAccordion = () => {
           {openFaq === faq.id && (
             <div className="px-6 pb-6">
               <div className="border-t border-gray-100 pt-4">
-                <p className="text-gray-700 leading-relaxed">
+                <p className="leading-relaxed" style={{ color: '#FFFFFF' }}>
                   {faq.answer}
                 </p>
               </div>
