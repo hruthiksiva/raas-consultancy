@@ -1,5 +1,7 @@
-import { useState, useEffect } from 'react';
+import { useState } from 'react';
 import Header from '../components/Header';
+import Testimonials from '../components/Testimonials';
+import USPSection from '../components/USPSection';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -10,44 +12,6 @@ const Contact = () => {
   });
 
   const [isSubmitting, setIsSubmitting] = useState(false);
-  const [currentTestimonial, setCurrentTestimonial] = useState(0);
-
-  const testimonials = [
-    {
-      text: "RAAS made tax season a breeze for me. They not only filed everything on time but also helped me save more through smart planning I never knew existed. Super professional and responsive!",
-      author: "Ritika S.",
-      role: "Freelancer"
-    },
-    {
-      text: "We were all over the place with our finances until RAAS stepped in. Now, our books are clean, organized, and always up to date. It's like having a full finance team without the cost.",
-      author: "Amit K.",
-      role: "Startup Founder"
-    },
-    {
-      text: "I turn to RAAS for every major business decision—from funding strategies to structuring deals. Their advisory is honest, founder-friendly, and tailored to small businesses like mine.",
-      author: "Sneha P.",
-      role: "Business Owner"
-    },
-    {
-      text: "The reports RAAS provides are not just numbers—they're insights. Their monthly dashboards help me understand where we stand financially and plan better for the future.",
-      author: "Ravindra T.",
-      role: "MSME Owner"
-    },
-    {
-      text: "Setting up my business felt overwhelming until RAAS took over the entire registration and compliance process. They handled it end-to-end while I focused on building the brand.",
-      author: "Nikhil R.",
-      role: "Entrepreneur"
-    }
-  ];
-
-  // Auto-scroll testimonials
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentTestimonial((prev) => (prev + 1) % testimonials.length);
-    }, 4000); // Change every 4 seconds
-
-    return () => clearInterval(interval);
-  }, [testimonials.length]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -91,50 +55,7 @@ const Contact = () => {
       </section>
 
       {/* USP Section */}
-      <section className="py-16 md:py-24 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-3 gap-8">
-            {/* USP 1 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center border border-gray-100">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <div className="w-8 h-8 bg-blue-600 rounded"></div>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                GST, ITR, ROC – handled end-to-end
-              </h3>
-              <p className="text-gray-600">
-                Complete compliance management from registration to filing, ensuring your business stays on track.
-              </p>
-            </div>
-
-            {/* USP 2 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center border border-gray-100">
-              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <div className="w-8 h-8 bg-green-600 rounded"></div>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Transparent pricing. Zero paperwork.
-              </h3>
-              <p className="text-gray-600">
-                Clear, fixed pricing with no hidden fees. Digital-first approach eliminates paperwork hassles.
-              </p>
-            </div>
-
-            {/* USP 3 */}
-            <div className="bg-white rounded-xl shadow-lg p-8 text-center border border-gray-100">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mx-auto mb-6">
-                <div className="w-8 h-8 bg-purple-600 rounded"></div>
-              </div>
-              <h3 className="text-xl font-bold text-gray-900 mb-4">
-                Personalized CA consultation
-              </h3>
-              <p className="text-gray-600">
-                Direct access to Chartered Accountants who understand your business and growth stage.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+      <USPSection />
 
       {/* CTA Form & Testimonials Section */}
       <section className="py-16 md:py-24 bg-white">
@@ -261,71 +182,13 @@ const Contact = () => {
 
             {/* Testimonials Section */}
             <div className="flex flex-col justify-center">
-              <div className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 md:p-12 relative overflow-hidden">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-900 mb-2">
-                    What Our Clients Say
-                  </h3>
-                  <p className="text-gray-600">
-                    Trusted by startups and businesses across India
-                  </p>
-                </div>
-
-                {/* Testimonials Container */}
-                <div className="relative h-64 md:h-80">
-                  {testimonials.map((testimonial, index) => (
-                    <div
-                      key={index}
-                      className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                        index === currentTestimonial
-                          ? 'opacity-100 transform translate-x-0'
-                          : 'opacity-0 transform translate-x-full'
-                      }`}
-                    >
-                      <div className="h-full flex flex-col justify-center">
-                        {/* Quote Icon */}
-                        <div className="text-blue-400 mb-4">
-                          <svg className="w-8 h-8 mx-auto" fill="currentColor" viewBox="0 0 24 24">
-                            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                          </svg>
-                        </div>
-
-                        {/* Testimonial Text */}
-                        <blockquote className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6 text-center italic">
-                          "{testimonial.text}"
-                        </blockquote>
-
-                        {/* Author Info */}
-                        <div className="text-center">
-                          <div className="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-3">
-                            <span className="text-blue-600 font-semibold text-lg">
-                              {testimonial.author.charAt(0)}
-                            </span>
-                          </div>
-                          <div>
-                            <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                            <p className="text-sm text-gray-600">{testimonial.role}</p>
-                          </div>
-                        </div>
-                      </div>
-                    </div>
-                  ))}
-                </div>
-
-                {/* Testimonial Indicators */}
-                <div className="flex justify-center space-x-2 mt-6">
-                  {testimonials.map((_, index) => (
-                    <div
-                      key={index}
-                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
-                        index === currentTestimonial
-                          ? 'bg-blue-600 w-6'
-                          : 'bg-blue-300'
-                      }`}
-                    />
-                  ))}
-                </div>
-              </div>
+              <Testimonials 
+                showHeader={false}
+                showCustomHeader={true}
+                customHeaderTitle="What Our Clients Say"
+                customHeaderSubtitle="Trusted by startups and businesses across India"
+                className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 md:p-12 relative overflow-hidden"
+              />
             </div>
           </div>
         </div>

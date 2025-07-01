@@ -1,0 +1,23 @@
+[
+  {
+    "id": 1,
+    "title": "GST, ITR, ROC – handled end-to-end",
+    "description": "Complete compliance management from registration to filing, ensuring your business stays on track.",
+    "iconBgColor": "bg-blue-100",
+    "iconColor": "bg-blue-600"
+  },
+  {
+    "id": 2,
+    "title": "Transparent pricing. Zero paperwork.",
+    "description": "Clear, fixed pricing with no hidden fees. Digital-first approach eliminates paperwork hassles.",
+    "iconBgColor": "bg-green-100",
+    "iconColor": "bg-green-600"
+  },
+  {
+    "id": 3,
+    "title": "Personalized CA consultation",
+    "description": "Direct access to Chartered Accountants who understand your business and growth stage.",
+    "iconBgColor": "bg-purple-100",
+    "iconColor": "bg-purple-600"
+  }
+] 
