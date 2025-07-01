@@ -11,13 +11,13 @@ const ServicesSection = () => {
   }, []);
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section className="py-16 md:py-24" style={{ backgroundColor: '#141A1F', color: '#FFFFFF' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#FFFFFF' }}>
             Our Services
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#FFFFFF' }}>
             Comprehensive financial solutions designed to drive your business forward
           </p>
         </div>

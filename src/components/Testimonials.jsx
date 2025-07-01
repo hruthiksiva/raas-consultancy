@@ -22,27 +22,27 @@ const Testimonials = ({
   }, []);
 
   return (
-    <div className={className}>
+    <section className={className} style={{ backgroundColor: '#232E3A', width: '100%', paddingTop: '4rem', paddingBottom: '4rem' }}>
       {showHeader && (
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#FFFFFF' }}>
             {title}
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#FFFFFF' }}>
             {subtitle}
           </p>
         </div>
       )}
       
       <div className={showHeader ? "max-w-4xl mx-auto" : ""}>
-        <div className={showHeader ? "bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 md:p-12 relative overflow-hidden" : className}>
+        <div className={showHeader ? "rounded-2xl p-8 md:p-12 relative overflow-hidden" : className} style={{ backgroundColor: '#B69567' }}>
           {/* Custom Header for Contact Page */}
           {showCustomHeader && (
             <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold text-gray-900 mb-2">
+              <h3 className="text-2xl font-bold mb-2" style={{ color: '#141A1F' }}>
                 {customHeaderTitle}
               </h3>
-              <p className="text-gray-600">
+              <p style={{ color: '#141A1F' }}>
                 {customHeaderSubtitle}
               </p>
             </div>
@@ -60,27 +60,27 @@ const Testimonials = ({
               >
                 <div className="h-full flex flex-col justify-center">
                   {/* Quote Icon */}
-                  <div className="text-blue-400 mb-4">
+                  <div className="mb-4" style={{ color: '#141A1F' }}>
                     <svg className="w-8 h-8 mx-auto" fill="currentColor" viewBox="0 0 24 24">
                       <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
                     </svg>
                   </div>
 
                   {/* Testimonial Text */}
-                  <blockquote className="text-gray-700 text-lg md:text-xl leading-relaxed mb-6 text-center italic">
+                  <blockquote className="text-lg md:text-xl leading-relaxed mb-6 text-center italic" style={{ color: '#141A1F' }}>
                     "{testimonial.text}"
                   </blockquote>
 
                   {/* Author Info */}
                   <div className="text-center">
-                    <div className="w-12 h-12 bg-blue-200 rounded-full flex items-center justify-center mx-auto mb-3">
-                      <span className="text-blue-600 font-semibold text-lg">
+                    <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ backgroundColor: '#232E3A' }}>
+                      <span className="font-semibold text-lg" style={{ color: '#B69567' }}>
                         {testimonial.author.charAt(0)}
                       </span>
                     </div>
                     <div>
-                      <p className="font-semibold text-gray-900">{testimonial.author}</p>
-                      <p className="text-sm text-gray-600">{testimonial.role}</p>
+                      <p className="font-semibold" style={{ color: '#141A1F' }}>{testimonial.author}</p>
+                      <p className="text-sm" style={{ color: '#141A1F' }}>{testimonial.role}</p>
                     </div>
                   </div>
                 </div>
@@ -95,15 +95,15 @@ const Testimonials = ({
                 key={index}
                 className={`w-2 h-2 rounded-full transition-all duration-300 ${
                   index === currentTestimonial
-                    ? 'bg-blue-600 w-6'
-                    : 'bg-blue-300'
+                    ? 'bg-[#232E3A] w-6'
+                    : 'bg-[#232E3A] opacity-50'
                 }`}
               />
             ))}
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 
