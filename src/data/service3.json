@@ -1,0 +1,27 @@
+{
+  "title": "Registrations & Compliance",
+  "description": "Complete business registration and compliance services to ensure your business operates legally and efficiently. From incorporation to ongoing compliance, we handle it all.",
+  "iconBg": "bg-purple-100",
+  "iconInner": "bg-purple-600",
+  "features": [
+    {
+      "title": "Company Incorporation",
+      "description": "Pvt Ltd, LLP, Partnership registration and setup"
+    },
+    {
+      "title": "GST, MSME, Udyam, ROC Filings",
+      "description": "Comprehensive regulatory compliance management"
+    },
+    {
+      "title": "IEC Code Registration",
+      "description": "Import-Export code registration for international trade"
+    },
+    {
+      "title": "Annual & Statutory Compliances",
+      "description": "Ongoing compliance management and reporting"
+    }
+  ],
+  "cta": "Request Service Proposal",
+  "ctaLink": "#contact",
+  "imageLabel": "Compliance Image"
+} 

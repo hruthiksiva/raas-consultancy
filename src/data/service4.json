@@ -1,0 +1,23 @@
+{
+  "title": "Advisory & Reporting",
+  "description": "Strategic financial advisory services to help you make informed decisions and drive business growth. Our expert insights provide clarity and direction for your financial future.",
+  "iconBg": "bg-orange-100",
+  "iconInner": "bg-orange-600",
+  "features": [
+    {
+      "title": "Financial Health Reports",
+      "description": "Comprehensive analysis of your business financial health"
+    },
+    {
+      "title": "Cash Flow & Profitability Analysis",
+      "description": "Detailed insights into cash flow patterns and profitability"
+    },
+    {
+      "title": "Virtual CFO Services",
+      "description": "Strategic financial leadership and decision support"
+    }
+  ],
+  "cta": "Request Service Proposal",
+  "ctaLink": "#contact",
+  "imageLabel": "Advisory Image"
+} 

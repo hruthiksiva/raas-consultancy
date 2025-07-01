@@ -1,0 +1,23 @@
+{
+  "title": "Bookkeeping",
+  "description": "Modern, cloud-based bookkeeping solutions that provide real-time insights into your financial health. Our systematic approach ensures accuracy and accessibility.",
+  "iconBg": "bg-green-100",
+  "iconInner": "bg-green-600",
+  "features": [
+    {
+      "title": "Monthly Cloud-Based Bookkeeping",
+      "description": "Secure, accessible financial records in the cloud"
+    },
+    {
+      "title": "Real-Time Access to Financials",
+      "description": "Instant access to your financial data anytime, anywhere"
+    },
+    {
+      "title": "Audit-Ready Reports",
+      "description": "Comprehensive reports prepared for audit requirements"
+    }
+  ],
+  "cta": "Request Service Proposal",
+  "ctaLink": "#contact",
+  "imageLabel": "Bookkeeping Image"
+} 

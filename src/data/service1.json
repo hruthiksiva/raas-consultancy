@@ -1,0 +1,23 @@
+{
+  "title": "Tax Planning & Filing",
+  "description": "Expert tax planning and filing services to ensure compliance while maximizing your savings. Our Chartered professionals handle all aspects of tax management with precision and care.",
+  "iconBg": "bg-blue-100",
+  "iconInner": "bg-blue-600",
+  "features": [
+    {
+      "title": "Personal and Business ITR",
+      "description": "Comprehensive income tax return filing for individuals and businesses"
+    },
+    {
+      "title": "GST Monthly/Quarterly Returns",
+      "description": "Timely GST filing and compliance management"
+    },
+    {
+      "title": "TDS Filing & Reconciliation",
+      "description": "Accurate TDS calculations, filing, and reconciliation services"
+    }
+  ],
+  "cta": "Request Service Proposal",
+  "ctaLink": "#contact",
+  "imageLabel": "Tax Planning Image"
+} 
