@@ -17,23 +17,23 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
   };
 
   return (
-    <section className="py-16 md:py-24 bg-white">
+    <section style={{ backgroundColor: '#232E3A' }} className="py-16 md:py-24">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FFFFFF' }}>
             Get Your Free Consultation
           </h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto">
+          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#FFFFFF' }}>
             Ready to simplify your compliance? Fill out the form below and our team will get back to you within 24 hours.
           </p>
         </div>
         <div className="grid lg:grid-cols-2 gap-12">
           {/* CTA Form */}
-          <div className="bg-gray-50 rounded-2xl shadow-xl p-8 md:p-12">
+          <div className="rounded-2xl shadow-xl p-8 md:p-12" style={{ backgroundColor: '#FFFFFF' }}>
             <form onSubmit={handleSubmit} className="space-y-6">
               {/* Name Field */}
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="name" className="block text-sm font-semibold mb-2" style={{ color: '#232E3A' }}>
                   Name *
                 </label>
                 <input
@@ -45,11 +45,12 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
                   placeholder="Enter your full name"
+                  style={{ color: '#232E3A' }}
                 />
               </div>
               {/* Email Field */}
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="email" className="block text-sm font-semibold mb-2" style={{ color: '#232E3A' }}>
                   Email *
                 </label>
                 <input
@@ -61,11 +62,12 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
                   placeholder="Enter your email address"
+                  style={{ color: '#232E3A' }}
                 />
               </div>
               {/* Business Stage Field */}
               <div>
-                <label htmlFor="businessStage" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="businessStage" className="block text-sm font-semibold mb-2" style={{ color: '#232E3A' }}>
                   Business Stage *
                 </label>
                 <select
@@ -75,6 +77,7 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                  style={{ color: '#232E3A' }}
                 >
                   <option value="">Select your business stage</option>
                   <option value="idea">Just an idea</option>
@@ -86,7 +89,7 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
               </div>
               {/* Services Needed Field */}
               <div>
-                <label htmlFor="servicesNeeded" className="block text-sm font-semibold text-gray-700 mb-2">
+                <label htmlFor="servicesNeeded" className="block text-sm font-semibold mb-2" style={{ color: '#232E3A' }}>
                   Services Needed *
                 </label>
                 <select
@@ -96,6 +99,7 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
                   onChange={handleInputChange}
                   required
                   className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                  style={{ color: '#232E3A' }}
                 >
                   <option value="">Select services you need</option>
                   <option value="tax-filing">Tax Filing & Planning</option>

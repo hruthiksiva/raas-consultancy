@@ -4,10 +4,10 @@ import uspsData from '../../data/usps.json';
 const USPSection = ({ 
   className = "",
   gridCols = "md:grid-cols-3",
-  sectionClassName = "py-16 md:py-24 bg-gray-50"
+  sectionClassName = "py-16 md:py-24",
 }) => {
   return (
-    <section className={sectionClassName}>
+    <section className={sectionClassName} style={{ backgroundColor: '#232E3A' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className={`grid ${gridCols} gap-8 ${className}`}>
           {uspsData.map((usp) => (

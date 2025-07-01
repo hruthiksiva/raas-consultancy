@@ -1,10 +1,10 @@
 const ContactInformationSection = () => (
-  <section className="py-16 md:py-24 bg-gray-50">
+  <section style={{ backgroundColor: '#232E3A' }} className="py-16 md:py-24">
     <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="grid md:grid-cols-2 gap-12">
         {/* Contact Details */}
         <div>
-          <h2 className="text-3xl font-bold text-gray-900 mb-8">
+          <h2 className="text-3xl font-bold mb-8" style={{ color: '#B69567' }}>
             Get in Touch
           </h2>
           <div className="space-y-6">
@@ -16,8 +16,8 @@ const ContactInformationSection = () => (
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 mb-1">Address</h3>
-                <p className="text-gray-600">
+                <h3 className="font-semibold mb-1" style={{ color: '#B69567' }}>Address</h3>
+                <p style={{ color: '#FFFFFF' }}>
                   3-220/1 Pagadamanu Street<br />
                   Greamspet, Chittoor<br />
                   517002
@@ -31,8 +31,8 @@ const ContactInformationSection = () => (
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 mb-1">Phone</h3>
-                <a href="tel:+918688196461" className="text-blue-600 hover:text-blue-700 transition-colors duration-200">
+                <h3 className="font-semibold mb-1" style={{ color: '#B69567' }}>Phone</h3>
+                <a href="tel:+918688196461" style={{ color: '#FFFFFF' }} className="hover:text-blue-700 transition-colors duration-200">
                   +91 86881 96461
                 </a>
               </div>
@@ -44,8 +44,8 @@ const ContactInformationSection = () => (
                 </svg>
               </div>
               <div>
-                <h3 className="font-semibold text-gray-900 mb-1">Email</h3>
-                <a href="mailto:info@raasconsulting.com" className="text-blue-600 hover:text-blue-700 transition-colors duration-200">
+                <h3 className="font-semibold mb-1" style={{ color: '#B69567' }}>Email</h3>
+                <a href="mailto:info@raasconsulting.com" style={{ color: '#FFFFFF' }} className="hover:text-blue-700 transition-colors duration-200">
                   info@raasconsulting.com
                 </a>
               </div>
@@ -53,7 +53,7 @@ const ContactInformationSection = () => (
           </div>
         </div>
         {/* Map */}
-        <div className="bg-gray-200 rounded-xl h-64 flex items-center justify-center">
+        <div style={{ backgroundColor: '#FFFFFF' }} className="rounded-xl h-64 flex items-center justify-center">
           <div className="text-center">
             <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-4">
               <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">

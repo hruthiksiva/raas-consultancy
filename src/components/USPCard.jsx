@@ -6,14 +6,15 @@ const USPCard = ({
   className = ""
 }) => {
   return (
-    <div className={`bg-white rounded-xl shadow-lg p-8 text-center border border-gray-100 hover:shadow-xl transition-shadow duration-300 ${className}`}>
+    <div className={`rounded-xl shadow-lg p-8 text-center border border-gray-100 hover:shadow-xl transition-shadow duration-300 ${className}`}
+      style={{ backgroundColor: '#B69567' }}>
       <div className={`w-16 h-16 ${iconBgColor} rounded-lg flex items-center justify-center mx-auto mb-6`}>
         <div className={`w-8 h-8 ${iconColor} rounded`}></div>
       </div>
-      <h3 className="text-xl font-bold text-gray-900 mb-4">
+      <h3 className="text-xl font-bold mb-4" style={{ color: '#232E3A' }}>
         {title}
       </h3>
-      <p className="text-gray-600">
+      <p style={{ color: '#FFFFFF' }}>
         {description}
       </p>
     </div>
