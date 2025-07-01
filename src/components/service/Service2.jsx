@@ -12,7 +12,7 @@ const Service2 = () => {
   if (!data) return null;
 
   return (
-    <section className="py-16 md:py-24 bg-gray-50">
+    <section id="service2" className="py-16 md:py-24 bg-gray-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 items-center">
           <div className="order-2 lg:order-1">
