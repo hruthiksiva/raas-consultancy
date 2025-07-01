@@ -1,0 +1,30 @@
+[
+  {
+    "id": 1,
+    "title": "Tax Planning & Filing",
+    "description": "Smart strategies for ITR, GST, and TDS.",
+    "iconBg": "bg-blue-100",
+    "iconInner": "bg-blue-600"
+  },
+  {
+    "id": 2,
+    "title": "Bookkeeping",
+    "description": "Cloud-based, accurate monthly tracking.",
+    "iconBg": "bg-green-100",
+    "iconInner": "bg-green-600"
+  },
+  {
+    "id": 3,
+    "title": "Registrations & Compliance",
+    "description": "Incorporation, GST, ROC, Udyam, MSME, IEC, LLP & PVT LTD compliance.",
+    "iconBg": "bg-purple-100",
+    "iconInner": "bg-purple-600"
+  },
+  {
+    "id": 4,
+    "title": "Advisory & Reporting",
+    "description": "Strategic finance reports and founder-led consultation.",
+    "iconBg": "bg-orange-100",
+    "iconInner": "bg-orange-600"
+  }
+] 

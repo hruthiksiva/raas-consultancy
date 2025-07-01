@@ -1,7 +1,16 @@
 import Header from '../components/Header';
 import Testimonials from '../components/Testimonials';
+import ServiceCard from '../components/ServiceCard';
+import { useEffect, useState } from 'react';
 
 const Home = () => {
+  const [services, setServices] = useState([]);
+
+  useEffect(() => {
+    fetch('/src/data/services.json')
+      .then((res) => res.json())
+      .then((data) => setServices(data));
+  }, []);
 
   return (
     <div className="min-h-screen">
@@ -59,59 +68,16 @@ const Home = () => {
               Comprehensive financial solutions designed to drive your business forward
             </p>
           </div>
-          
           <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
-            {/* Tax Planning & Filing */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100">
-              <div className="w-16 h-16 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="w-8 h-8 bg-blue-600 rounded"></div>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Tax Planning & Filing
-              </h3>
-              <p className="text-gray-600">
-                Smart strategies for ITR, GST, and TDS.
-              </p>
-            </div>
-
-            {/* Bookkeeping */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100">
-              <div className="w-16 h-16 bg-green-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="w-8 h-8 bg-green-600 rounded"></div>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Bookkeeping
-              </h3>
-              <p className="text-gray-600">
-                Cloud-based, accurate monthly tracking.
-              </p>
-            </div>
-
-            {/* Registrations & Compliance */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100">
-              <div className="w-16 h-16 bg-purple-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="w-8 h-8 bg-purple-600 rounded"></div>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Registrations & Compliance
-              </h3>
-              <p className="text-gray-600">
-                Incorporation, GST, ROC, Udyam, MSME, IEC, LLP & PVT LTD compliance.
-              </p>
-            </div>
-
-            {/* Advisory & Reporting */}
-            <div className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-shadow duration-300 p-6 border border-gray-100">
-              <div className="w-16 h-16 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
-                <div className="w-8 h-8 bg-orange-600 rounded"></div>
-              </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3">
-                Advisory & Reporting
-              </h3>
-              <p className="text-gray-600">
-                Strategic finance reports and founder-led consultation.
-              </p>
-            </div>
+            {services.map(service => (
+              <ServiceCard
+                key={service.id}
+                title={service.title}
+                description={service.description}
+                iconBg={service.iconBg}
+                iconInner={service.iconInner}
+              />
+            ))}
           </div>
         </div>
       </section>
