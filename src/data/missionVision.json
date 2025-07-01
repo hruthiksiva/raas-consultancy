@@ -1,0 +1,16 @@
+[
+  {
+    "id": 1,
+    "title": "Our Mission",
+    "description": "To simplify financial complexities for individuals, freelancers, startups, MSMEs, Pvt Ltd companies, and LLPs with ethical, transparent, and tailored solutions.",
+    "iconBg": "bg-blue-100",
+    "iconInner": "bg-blue-600"
+  },
+  {
+    "id": 2,
+    "title": "Our Vision",
+    "description": "To be India's most trusted, accessible, and forward-thinking financial consultancy, offering clarity, confidence, and compliance under one digital-first roof.",
+    "iconBg": "bg-green-100",
+    "iconInner": "bg-green-600"
+  }
+] 

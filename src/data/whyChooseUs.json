@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "title": "Chartered Expertise Without Chartered Cost",
+    "description": "We offer CA-led services that are affordable, honest, and high-quality.",
+    "iconBg": "bg-blue-100",
+    "iconInner": "bg-blue-600"
+  },
+  {
+    "id": 2,
+    "title": "Founder-Led Personalized Service",
+    "description": "Your journey is guided by experienced professionals who care.",
+    "iconBg": "bg-green-100",
+    "iconInner": "bg-green-600"
+  },
+  {
+    "id": 3,
+    "title": "Focused on MSMEs, Startups, Pvt Ltds, and LLPs",
+    "description": "We understand your growth stage and cater services accordingly.",
+    "iconBg": "bg-purple-100",
+    "iconInner": "bg-purple-600"
+  },
+  {
+    "id": 4,
+    "title": "Transparent Pricing",
+    "description": "No retainers. No vague quotes. Only fixed and fair deliverables.",
+    "iconBg": "bg-orange-100",
+    "iconInner": "bg-orange-600"
+  },
+  {
+    "id": 5,
+    "title": "Digital-First Workflow",
+    "description": "Cloud tools. Paperless processes. Anytime access.",
+    "iconBg": "bg-teal-100",
+    "iconInner": "bg-teal-600"
+  },
+  {
+    "id": 6,
+    "title": "Confidential & Ethical",
+    "description": "Your data is secure. Your financial story is respected.",
+    "iconBg": "bg-red-100",
+    "iconInner": "bg-red-600"
+  }
+] 
