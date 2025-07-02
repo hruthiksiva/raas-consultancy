@@ -1,8 +1,10 @@
 import React, { useEffect, useState } from 'react';
 import BookKeeping from '../../assets/BookKeeping.jpg';
+import { useNavigate } from 'react-router-dom';
 
 const Service2 = () => {
   const [data, setData] = useState(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
     fetch('/src/data/service2.json')
@@ -11,6 +13,12 @@ const Service2 = () => {
   }, []);
 
   if (!data) return null;
+
+  const handleCTA = (e) => {
+    e.preventDefault();
+    navigate('/contact');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
 
   return (
     <section id="service2" className="py-16 md:py-24" style={{ backgroundColor: '#232E3A' }}>
@@ -52,9 +60,9 @@ const Service2 = () => {
                 </div>
               ))}
             </div>
-            <a href={data.ctaLink} className="inline-block px-8 py-4 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1" style={{ backgroundColor: '#B69567', color: '#FFFFFF' }}>
+            <button onClick={handleCTA} className="inline-block px-8 py-4 rounded-lg font-semibold transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1" style={{ backgroundColor: '#B69567', color: '#FFFFFF' }}>
               {data.cta}
-            </a>
+            </button>
           </div>
         </div>
       </div>
