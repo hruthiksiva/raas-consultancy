@@ -29,28 +29,28 @@ const BlogDetail = () => {
         case 'tip':
           return (
             <div key={index} style={{ background: '#232E3A' }} className="mb-8 p-6 rounded-xl border-l-4" >
-              <h3 className="text-xl font-bold mb-3" style={{ color: '#B69567' }}>{section.title}</h3>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#FFFFFF' }}>{section.title}</h3>
               <p style={{ color: '#FFFFFF' }} className="leading-relaxed">{section.text}</p>
             </div>
           );
         case 'lesson':
           return (
             <div key={index} style={{ background: '#232E3A' }} className="mb-8 p-6 rounded-xl border-l-4" >
-              <h3 className="text-xl font-bold mb-3" style={{ color: '#B69567' }}>{section.title}</h3>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#FFFFFF' }}>{section.title}</h3>
               <p style={{ color: '#FFFFFF' }} className="leading-relaxed">{section.text}</p>
             </div>
           );
         case 'section':
           return (
             <div key={index}>
-              <h3 className="text-xl font-bold mb-3" style={{ color: '#B69567' }}>{section.title}</h3>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#FFFFFF' }}>{section.title}</h3>
               <p style={{ color: '#FFFFFF' }} className="leading-relaxed">{section.text}</p>
             </div>
           );
         case 'list':
           return (
             <div key={index}>
-              <h3 className="text-xl font-bold mb-3" style={{ color: '#B69567' }}>{section.title}</h3>
+              <h3 className="text-xl font-bold mb-3" style={{ color: '#FFFFFF' }}>{section.title}</h3>
               <ul className="list-disc list-inside space-y-2" style={{ color: '#FFFFFF' }}>
                 {section.items.map((item, itemIndex) => (
                   <li key={itemIndex} className="leading-relaxed">{item}</li>

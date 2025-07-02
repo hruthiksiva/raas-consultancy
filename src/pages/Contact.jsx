@@ -22,7 +22,7 @@ const Contact = () => {
   };
 
   return (
-    <div className="min-h-screen">
+    <div id="contact-top" className="min-h-screen">
       {/* Hero Section */}
       <ContactHeroSection 
         title="CA-Led Startup Compliance & Tax Filing — Simple. Fast. Affordable."
