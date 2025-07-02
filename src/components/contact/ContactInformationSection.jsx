@@ -1,3 +1,5 @@
+import MapInteractive from '../../assets/Map-interactive.jpg';
+
 const ContactInformationSection = () => (
   <section style={{ backgroundColor: '#232E3A' }} className="py-8 md:py-24">
     <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
@@ -53,21 +55,22 @@ const ContactInformationSection = () => (
           </div>
         </div>
         {/* Map */}
-        <div style={{ backgroundColor: '#FFFFFF' }} className="rounded-xl h-48 sm:h-64 flex items-center justify-center">
-          <div className="text-center">
-            <div className="w-12 h-12 bg-blue-100 rounded-lg flex items-center justify-center mx-auto mb-2 sm:mb-4">
-              <svg className="w-8 h-8 text-blue-600" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z"/>
-              </svg>
-            </div>
-            <p className="text-xs sm:text-base" style={{ color: '#232E3A' }}>Interactive Map</p>
-            <button 
-              onClick={() => window.open('https://maps.app.goo.gl/25GeRGT7Pt1iKEE58', '_blank')}
-              className="mt-1 sm:mt-2 text-blue-600 hover:text-blue-700 text-xs sm:text-sm font-medium"
-            >
-              View on Google Maps
-            </button>
-          </div>
+        <div
+          style={{
+            backgroundImage: `url(${MapInteractive})`,
+            backgroundSize: 'cover',
+            backgroundPosition: 'center',
+            backgroundRepeat: 'no-repeat',
+          }}
+          className="rounded-xl h-48 sm:h-64 flex items-center justify-center relative"
+        >
+          <button
+            onClick={() => window.open('https://maps.app.goo.gl/25GeRGT7Pt1iKEE58', '_blank')}
+            className="z-10 bg-white/80 hover:bg-white text-blue-600 hover:text-blue-700 text-xs sm:text-sm font-medium px-4 py-2 rounded-lg shadow transition"
+          >
+            View on Google Maps
+          </button>
+          <div className="absolute inset-0 rounded-xl" style={{ background: 'rgba(0,0,0,0.15)' }}></div>
         </div>
       </div>
     </div>

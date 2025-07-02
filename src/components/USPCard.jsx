@@ -41,11 +41,11 @@ const USPCard = ({
 }) => {
   return (
     <div className={`rounded-xl shadow-lg p-4 sm:p-8 text-center hover:shadow-xl transition-shadow duration-300 ${className}`}
-      style={{ backgroundColor: '#B69567' }}>
+      style={{ backgroundColor: '#2F3C4E' }}>
       <div className="w-10 h-10 mx-auto mb-4 flex items-center justify-center">
         {getIcon(title, id)}
       </div>
-      <h3 className="text-base sm:text-xl font-bold mb-2 sm:mb-4" style={{ color: '#232E3A' }}>
+      <h3 className="text-base sm:text-xl font-bold mb-2 sm:mb-4" style={{ color: '#FFFFFF' }}>
         {title}
       </h3>
       <p className="text-sm sm:text-base" style={{ color: '#FFFFFF' }}>
