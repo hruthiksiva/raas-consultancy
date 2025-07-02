@@ -13,7 +13,7 @@ const FinalCTASection = () => {
   return (
     <section className="py-8 md:py-16 lg:py-24" style={{ backgroundColor: '#141A1F' }}>
       <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6" style={{ color: '#B69567' }}>
+        <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6" style={{ color: '#FFFFFF' }}>
           Let's simplify your finances — together.
         </h2>
         <button
