@@ -1,4 +1,4 @@
-import Testimonials from '../Testimonials';
+import React from 'react';
 
 const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmitting, handleInputChange }) => {
   const handleSubmit = (e) => {
@@ -17,23 +17,22 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
   };
 
   return (
-    <section style={{ backgroundColor: '#232E3A' }} className="py-16 md:py-24">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6" style={{ color: '#FFFFFF' }}>
+    <section style={{ backgroundColor: '#232E3A' }} className="py-8 md:py-20">
+      <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 sm:mb-16">
+          <h2 className="text-xl sm:text-3xl md:text-4xl font-bold mb-4 sm:mb-6" style={{ color: '#FFFFFF' }}>
             Get Your Free Consultation
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#FFFFFF' }}>
+          <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#FFFFFF' }}>
             Ready to simplify your compliance? Fill out the form below and our team will get back to you within 24 hours.
           </p>
         </div>
-        <div className="grid lg:grid-cols-2 gap-12">
-          {/* CTA Form */}
-          <div className="rounded-2xl shadow-xl p-8 md:p-12" style={{ backgroundColor: '#FFFFFF' }}>
-            <form onSubmit={handleSubmit} className="space-y-6">
+        <div className="flex justify-center">
+          <div className="rounded-2xl shadow-xl p-4 sm:p-8 md:p-12 w-full max-w-lg" style={{ backgroundColor: '#FFFFFF' }}>
+            <form onSubmit={handleSubmit} className="space-y-4 sm:space-y-6">
               {/* Name Field */}
               <div>
-                <label htmlFor="name" className="block text-sm font-semibold mb-2" style={{ color: '#232E3A' }}>
+                <label htmlFor="name" className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2" style={{ color: '#232E3A' }}>
                   Name *
                 </label>
                 <input
@@ -43,14 +42,14 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
                   value={formData.name}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                  className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-sm sm:text-base"
                   placeholder="Enter your full name"
                   style={{ color: '#232E3A' }}
                 />
               </div>
               {/* Email Field */}
               <div>
-                <label htmlFor="email" className="block text-sm font-semibold mb-2" style={{ color: '#232E3A' }}>
+                <label htmlFor="email" className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2" style={{ color: '#232E3A' }}>
                   Email *
                 </label>
                 <input
@@ -60,14 +59,14 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
                   value={formData.email}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                  className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-sm sm:text-base"
                   placeholder="Enter your email address"
                   style={{ color: '#232E3A' }}
                 />
               </div>
               {/* Business Stage Field */}
               <div>
-                <label htmlFor="businessStage" className="block text-sm font-semibold mb-2" style={{ color: '#232E3A' }}>
+                <label htmlFor="businessStage" className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2" style={{ color: '#232E3A' }}>
                   Business Stage *
                 </label>
                 <select
@@ -76,7 +75,7 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
                   value={formData.businessStage}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                  className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-sm sm:text-base"
                   style={{ color: '#232E3A' }}
                 >
                   <option value="">Select your business stage</option>
@@ -89,7 +88,7 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
               </div>
               {/* Services Needed Field */}
               <div>
-                <label htmlFor="servicesNeeded" className="block text-sm font-semibold mb-2" style={{ color: '#232E3A' }}>
+                <label htmlFor="servicesNeeded" className="block text-xs sm:text-sm font-semibold mb-1 sm:mb-2" style={{ color: '#232E3A' }}>
                   Services Needed *
                 </label>
                 <select
@@ -98,7 +97,7 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
                   value={formData.servicesNeeded}
                   onChange={handleInputChange}
                   required
-                  className="w-full px-4 py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200"
+                  className="w-full px-3 py-2 sm:px-4 sm:py-3 border border-gray-300 rounded-lg focus:ring-2 focus:ring-blue-500 focus:border-transparent transition-colors duration-200 text-sm sm:text-base"
                   style={{ color: '#232E3A' }}
                 >
                   <option value="">Select services you need</option>
@@ -112,11 +111,11 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
                 </select>
               </div>
               {/* Submit Button */}
-              <div className="pt-4">
+              <div className="pt-2 sm:pt-4">
                 <button
                   type="submit"
                   disabled={isSubmitting}
-                  className={`w-full bg-blue-600 text-white py-4 px-8 rounded-lg font-semibold text-lg transition-all duration-300 ${
+                  className={`w-full bg-blue-600 text-white py-3 sm:py-4 px-6 sm:px-8 rounded-lg font-semibold text-base sm:text-lg transition-all duration-300 ${
                     isSubmitting 
                       ? 'opacity-50 cursor-not-allowed' 
                       : 'hover:bg-blue-700 hover:shadow-lg transform hover:-translate-y-1'
@@ -136,16 +135,6 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
                 </button>
               </div>
             </form>
-          </div>
-          {/* Testimonials Section */}
-          <div className="flex flex-col justify-center">
-            <Testimonials 
-              showHeader={false}
-              showCustomHeader={true}
-              customHeaderTitle="What Our Clients Say"
-              customHeaderSubtitle="Trusted by startups and businesses across India"
-              className="bg-gradient-to-br from-blue-50 to-blue-100 rounded-2xl p-8 md:p-12 relative overflow-hidden"
-            />
           </div>
         </div>
       </div>

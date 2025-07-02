@@ -3,6 +3,7 @@ import ContactHeroSection from '../components/contact/ContactHeroSection';
 import USPSection from '../components/contact/USPSection';
 import ContactCTAFormSection from '../components/contact/ContactCTAFormSection';
 import ContactInformationSection from '../components/contact/ContactInformationSection';
+import Testimonials from '../components/Testimonials';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -28,9 +29,7 @@ const Contact = () => {
         title="CA-Led Startup Compliance & Tax Filing — Simple. Fast. Affordable."
         subtitle="We help you stay compliant, save tax, and focus on scaling."
       />
-      {/* USP Section */}
-      <USPSection />
-      {/* CTA Form & Testimonials Section */}
+      {/* CTA Form Section (immediately after hero) */}
       <ContactCTAFormSection 
         formData={formData}
         setFormData={setFormData}
@@ -38,7 +37,11 @@ const Contact = () => {
         setIsSubmitting={setIsSubmitting}
         handleInputChange={handleInputChange}
       />
-      {/* Contact Information Section */}
+      {/* USP Section */}
+      <USPSection />
+      {/* Testimonials Section (after USP) */}
+      <Testimonials />
+      {/* Contact Information Section (Get in Touch) */}
       <ContactInformationSection />
     </div>
   );

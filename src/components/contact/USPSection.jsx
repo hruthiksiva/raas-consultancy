@@ -13,6 +13,7 @@ const USPSection = ({
           {uspsData.map((usp) => (
             <USPCard
               key={usp.id}
+              id={usp.id}
               title={usp.title}
               description={usp.description}
               iconBgColor={usp.iconBgColor}
