@@ -1,4 +1,5 @@
 import React from 'react';
+import OurStoryImg from '../../assets/OurStory.jpg';
 
 const OurStorySection = () => (
   <section className="py-16 md:py-24" style={{ backgroundColor: '#232E3A' }}>
@@ -13,9 +14,9 @@ const OurStorySection = () => (
           </p>
         </div>
         <div className="relative">
-          <div className="rounded-2xl p-8" style={{ background: 'rgba(255,255,255,0.05)', color: '#FFFFFF' }}>
-            <div className="w-full h-64 bg-white/20 rounded-lg flex items-center justify-center">
-              <span className="text-lg" style={{ color: '#FFFFFF', opacity: 0.8 }}>Company Story Image</span>
+          <div className="rounded-2xl p-8">
+            <div className="w-full h-64 bg-white/20 rounded-lg flex items-center justify-center overflow-hidden">
+              <img src={OurStoryImg} alt="Our Story" className="object-cover w-full h-full rounded-lg" />
             </div>
           </div>
         </div>
