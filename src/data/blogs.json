@@ -3,7 +3,7 @@
     "id": 1,
     "title": "Taxation Tips",
     "excerpt": "Essential tax planning strategies for businesses and individuals to maximize savings and ensure compliance.",
-    "image": "taxation-tips",
+    "image": "https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?auto=format&fit=crop&w=600&q=80",
     "slug": "taxation-tips",
     "category": "Tax Planning",
     "readTime": "5 min read"
@@ -12,7 +12,7 @@
     "id": 2,
     "title": "Compliance Simplified",
     "excerpt": "Streamlined compliance processes for MSMEs and startups to meet regulatory requirements efficiently.",
-    "image": "compliance-simplified",
+    "image": "https://images.unsplash.com/photo-1464983953574-0892a716854b?auto=format&fit=crop&w=600&q=80",
     "slug": "compliance-simplified",
     "category": "Compliance",
     "readTime": "4 min read"
@@ -21,7 +21,7 @@
     "id": 3,
     "title": "Startup Finance",
     "excerpt": "Financial management strategies and funding options for early-stage startups and entrepreneurs.",
-    "image": "startup-finance",
+    "image": "https://images.unsplash.com/photo-1461749280684-dccba630e2f6?auto=format&fit=crop&w=600&q=80",
     "slug": "startup-finance",
     "category": "Startup",
     "readTime": "6 min read"
@@ -30,7 +30,7 @@
     "id": 4,
     "title": "Expert Advice",
     "excerpt": "Professional insights and best practices from our Chartered professionals for business growth.",
-    "image": "expert-advice",
+    "image": "https://images.unsplash.com/photo-1504384308090-c894fdcc538d?auto=format&fit=crop&w=600&q=80",
     "slug": "expert-advice",
     "category": "Advisory",
     "readTime": "7 min read"
