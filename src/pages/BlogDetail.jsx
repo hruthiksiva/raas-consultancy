@@ -75,7 +75,7 @@ const BlogDetail = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#182028' }}>
       {/* Hero Header */}
-      <BlogDetailHeroSection title={currentBlog.title} subtitle="Read our latest insights and articles" />
+      <BlogDetailHeroSection title={currentBlog.title} subtitle="Read our latest insights and articles" image={currentBlog.image} />
       {/* Blog Content Section */}
       <BlogDetailContentSection currentBlog={currentBlog} renderContent={renderContent} />
           {/* Share Section */}

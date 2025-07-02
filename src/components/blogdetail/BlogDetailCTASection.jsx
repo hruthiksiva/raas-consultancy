@@ -1,6 +1,20 @@
+import FinalCTAImg from '../../assets/FinalCTA.jpg';
+
 const BlogDetailCTASection = () => (
-  <section style={{ backgroundColor: '#232E3A' }} className="py-10 md:py-24">
-    <div className="max-w-4xl mx-auto px-2 sm:px-6 lg:px-8 text-center">
+  <section
+    style={{
+      backgroundColor: '#232E3A',
+      backgroundImage: `url(${FinalCTAImg})`,
+      backgroundSize: 'cover',
+      backgroundPosition: 'center',
+      backgroundRepeat: 'no-repeat',
+      position: 'relative',
+    }}
+    className="relative py-10 md:py-24"
+  >
+    {/* Dark Overlay */}
+    <div className="absolute inset-0 bg-black bg-opacity-60 z-0"></div>
+    <div className="relative z-10 max-w-4xl mx-auto px-2 sm:px-6 lg:px-8 text-center">
       <h2 className="text-2xl sm:text-4xl font-bold mb-4 sm:mb-6" style={{ color: '#FFFFFF' }}>
         Need Professional Financial Advice?
       </h2>
