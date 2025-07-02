@@ -62,7 +62,7 @@ const Navbar = () => {
   return (
     <nav style={{ backgroundColor: '#182028' }} className="shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between h-16">
+        <div className="flex justify-between h-20">
           {/* Logo */}
           <div className="flex items-center">
             <button 
@@ -79,12 +79,8 @@ const Navbar = () => {
               <button
                 key={item.path}
                 onClick={() => handleNavClick(item.path)}
-                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 ${
-                  isActive(item.path)
-                    ? 'border-b-2'
-                    : ''
-                }`}
-                style={{ color: '#FFFFFF', backgroundColor: 'transparent', borderColor: isActive(item.path) ? '#FFFFFF' : 'transparent' }}
+                className="px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:text-[#B69567]"
+                style={{ color: '#FFFFFF', backgroundColor: 'transparent' }}
               >
                 {item.label}
               </button>
@@ -135,12 +131,8 @@ const Navbar = () => {
             <button
               key={item.path}
               onClick={() => handleNavClick(item.path)}
-              className={`block w-full text-left px-3 py-3 rounded-md text-base font-medium transition-all duration-200 ${
-                isActive(item.path)
-                  ? 'border-l-4'
-                  : ''
-              }`}
-              style={{ color: '#FFFFFF', backgroundColor: 'transparent', borderColor: isActive(item.path) ? '#FFFFFF' : 'transparent' }}
+              className="block w-full text-left px-3 py-3 rounded-md text-base font-medium transition-all duration-200 hover:text-[#B69567]"
+              style={{ color: '#FFFFFF', backgroundColor: 'transparent' }}
             >
               {item.label}
             </button>
