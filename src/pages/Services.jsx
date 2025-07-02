@@ -3,6 +3,7 @@ import { useLocation } from 'react-router-dom';
 import ServiceHeroSection from '../components/service/ServiceHeroSection';
 import ServiceOverviewSection from '../components/service/ServiceOverviewSection';
 import ServiceFinalCTASection from '../components/service/ServiceFinalCTASection';
+import FinalCTASection from '../components/home/FinalCTASection';
 
 const Services = () => {
   const location = useLocation();
@@ -28,7 +29,8 @@ const Services = () => {
     <div className="min-h-screen">
       <ServiceHeroSection />
       <ServiceOverviewSection />
-      <ServiceFinalCTASection />
+      {/* <ServiceFinalCTASection /> */}
+      <FinalCTASection/>
     </div>
   );
 };

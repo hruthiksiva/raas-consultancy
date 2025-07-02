@@ -1,5 +1,6 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
+import FinalCTAImg from '../../assets/FinalCTA.jpg';
 
 const FinalCTASection = () => {
   const navigate = useNavigate();
@@ -11,8 +12,21 @@ const FinalCTASection = () => {
   };
 
   return (
-    <section className="py-8 md:py-16 lg:py-24" style={{ backgroundColor: '#141A1F' }}>
-      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+    <section
+      className="relative flex items-center justify-center text-center px-4 sm:px-6 lg:px-8"
+      style={{
+        backgroundImage: `url(${FinalCTAImg})`,
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        backgroundRepeat: 'no-repeat',
+        minHeight: '400px',
+        height: 'auto',
+      }}
+    >
+      {/* Overlay */}
+      <div className="absolute inset-0 bg-black/60" aria-hidden="true"></div>
+      {/* Content */}
+      <div className="relative w-full max-w-4xl py-16 md:py-24 lg:py-32">
         <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-4 md:mb-6" style={{ color: '#FFFFFF' }}>
           Let's simplify your finances — together.
         </h2>
