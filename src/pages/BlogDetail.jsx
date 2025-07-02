@@ -81,7 +81,7 @@ const BlogDetail = () => {
           {/* Share Section */}
       {/* <BlogDetailShareSection /> */}
       {/* Related Articles */}
-      <BlogDetailRelatedSection relatedBlogs={relatedBlogs} onBlogClick={(slug) => (window.location.href = `/blog/${slug}`)} />
+      {/* <BlogDetailRelatedSection relatedBlogs={relatedBlogs} onBlogClick={(slug) => (window.location.href = `/blog/${slug}`)} /> */}
       {/* CTA Section */}
       <BlogDetailCTASection />
     </div>

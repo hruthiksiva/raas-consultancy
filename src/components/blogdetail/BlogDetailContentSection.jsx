@@ -24,13 +24,13 @@ const BlogDetailContentSection = ({ currentBlog, renderContent }) => (
         </div>
       </div>
       {/* Blog Image */}
-      <div className="mb-6 sm:mb-8">
+      {/* <div className="mb-6 sm:mb-8">
         <div className="w-full h-40 sm:h-64 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
           <span className="text-white/80 text-base sm:text-lg font-medium">
             {currentBlog.title.split(':')[0]}
           </span>
         </div>
-      </div>
+      </div> */}
       {/* Blog Content */}
       <div className="prose prose-lg max-w-none" style={{ color: '#FFFFFF' }}>
         {renderContent(currentBlog.content)}
