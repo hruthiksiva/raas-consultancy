@@ -29,17 +29,17 @@ const WhyChooseUsSection = () => {
   }, []);
 
   return (
-    <section className="py-16 md:py-24" style={{ backgroundColor: '#182028' }}>
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4" style={{ color: '#FFFFFF' }}>
+    <section className="py-10 md:py-16 lg:py-24" style={{ backgroundColor: '#FFFFFF' }}>
+      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
+        <div className="text-center mb-10 md:mb-16">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4" style={{ color: '#2F3C4E' }}>
             Why Choose Us
           </h2>
-          <p className="text-lg max-w-2xl mx-auto" style={{ color: '#FFFFFF' }}>
+          <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#2F3C4E' }}>
             We combine professional expertise with personalized service to deliver exceptional results
           </p>
         </div>
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
           {cards.map((card, idx) => (
             <WhyChooseUsCard
               key={card.id}
@@ -50,15 +50,15 @@ const WhyChooseUsSection = () => {
           ))}
         </div>
         {/* Growth-Driven Thinking - Full Width */}
-        <div className="mt-12 rounded-xl p-8" style={{ backgroundColor: '#232E3A' }}>
+        <div className="mt-8 md:mt-12 rounded-xl p-4 md:p-8" style={{ backgroundColor: '#232E3A' }}>
           <div className="max-w-4xl mx-auto text-center">
-            <div className="flex items-center justify-center mb-6 mx-auto">
+            <div className="flex items-center justify-center mb-4 md:mb-6 mx-auto">
               {growthIcon}
             </div>
-            <h3 className="text-2xl font-bold mb-4" style={{ color: '#FFFFFF' }}>
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold mb-2 md:mb-4" style={{ color: '#FFFFFF' }}>
               Growth-Driven Thinking
             </h3>
-            <p className="text-lg" style={{ color: '#FFFFFF' }}>
+            <p className="text-base sm:text-lg" style={{ color: '#FFFFFF' }}>
               We don't just maintain — we advise and help you scale.
             </p>
           </div>

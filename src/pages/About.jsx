@@ -12,7 +12,7 @@ const About = () => {
       <OurStorySection />
       <MissionVisionSection />
       <WhyChooseUsSection />
-      <FoundersNoteSection />
+      {/* <FoundersNoteSection /> */}
       <FinalCTASection />
     </div>
   );

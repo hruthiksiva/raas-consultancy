@@ -15,7 +15,7 @@ const WhoWeAreSection = () => (
         </div>
         <div className="relative">
         <div className="rounded-lg md:rounded-xl lg:rounded-2xl p-4 md:p-6 lg:p-8">
-            <div className="w-full h-48 md:h-56 lg:h-64 rounded-lg flex items-center justify-center overflow-hidden">
+            <div className="w-full h-48 md:h-72 lg:h-80 rounded-lg flex items-center justify-center overflow-hidden">
               <img src={WhoWeAre} alt="Who We Are" className="object-cover w-full h-full rounded-lg" />
             </div>
           </div>
