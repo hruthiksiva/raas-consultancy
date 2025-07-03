@@ -6,14 +6,14 @@ import Service4 from './Service4';
 
 const ServiceOverviewSection = () => (
   <>
-    <section className="py-10 md:py-24" style={{ backgroundColor: '#232E3A' }}>
+    <section className="py-10 md:py-24" style={{ backgroundColor: '#182028' }}>
       <div className="max-w-7xl mx-auto px-2 sm:px-6 lg:px-8">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-2xl md:text-4xl font-bold mb-4 md:mb-6" style={{ color: '#FFFFFF' }}>
-            Comprehensive Financial Solutions
+            {/* Comprehensive Financial Solutions */}
           </h2>
           <p className="text-base md:text-lg max-w-3xl mx-auto" style={{ color: '#FFFFFF' }}>
-            From tax planning to business advisory, we provide end-to-end financial services designed to help your business grow and thrive.
+            {/* From tax planning to business advisory, we provide end-to-end financial services designed to help your business grow and thrive. */}
           </p>
         </div>
       </div>

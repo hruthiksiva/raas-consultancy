@@ -17,7 +17,7 @@ const ServiceHeroSection = () => (
         Our Services
       </h1>
       <p className="text-base md:text-xl max-w-3xl mx-auto" style={{ color: '#FFFFFF' }}>
-        Discover the range of services we offer
+      From tax planning to business advisory, we provide end-to-end financial services designed to help your business grow and thrive.
       </p>
     </div>
   </section>

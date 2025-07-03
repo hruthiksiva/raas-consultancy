@@ -2,6 +2,7 @@ import FaqsHeroSection from '../components/faqs/FaqsHeroSection';
 import FaqAccordion from '../components/faqs/FaqAccordion';
 import FaqsContactCTASection from '../components/faqs/FaqsContactCTASection';
 import FaqsAdditionalHelpSection from '../components/faqs/FaqsAdditionalHelpSection';
+import FinalCTASection from '../components/home/FinalCTASection';
 
 const Faqs = () => {
   return (
@@ -29,6 +30,7 @@ const Faqs = () => {
 
           {/* Contact CTA */}
           <FaqsContactCTASection />
+          {/* <FinalCTASection/> */}
         </div>
       </section>
 
