@@ -4,6 +4,9 @@ import USPSection from '../components/contact/USPSection';
 import ContactCTAFormSection from '../components/contact/ContactCTAFormSection';
 import ContactInformationSection from '../components/contact/ContactInformationSection';
 import Testimonials from '../components/Testimonials';
+import FaqsHeroSection from '../components/faqs/FaqsHeroSection';
+import FaqAccordion from '../components/faqs/FaqAccordion';
+import FaqsContactCTASection from '../components/faqs/FaqsContactCTASection';
 
 const Contact = () => {
   const [formData, setFormData] = useState({

@@ -1,8 +1,8 @@
 import React from 'react';
-import OurStoryImg from '../../assets/OurStory.jpg';
+import OurStoryNewImg from '../../assets/OurStoryNew.jpg';
 
 const OurStorySection = () => (
-  <section className="py-10 md:py-16 lg:py-24" style={{ backgroundColor: '#FFFFFF' }}>
+  <section className="py-10 md:py-16 lg:py-24" style={{ backgroundColor: '#EAE9E5' }}>
     <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 items-center">
         <div>
@@ -16,7 +16,7 @@ const OurStorySection = () => (
         <div className="relative">
           <div className="rounded-2xl p-4 md:p-8">
             <div className="w-full h-48 sm:h-64 md:h-80 lg:h-[28rem] border border-[#2F3C4E] bg-white/20 rounded-lg flex items-center justify-center overflow-hidden">
-              <img src={OurStoryImg} alt="Our Story" className="object-cover object-top w-full h-full rounded-lg" />
+              <img src={OurStoryNewImg} alt="Our Story" className="object-cover object-top w-full h-full rounded-lg" />
             </div>
           </div>
         </div>
