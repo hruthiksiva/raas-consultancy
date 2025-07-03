@@ -7,7 +7,11 @@ const FaqAccordion = () => {
   useEffect(() => {
     fetch('/src/data/faqs.json')
       .then((res) => res.json())
-      .then((data) => setFaqs(data));
+      .then((data) => {
+        // Filter out questions with IDs 1, 3, and 4
+        const filteredFaqs = data.filter(faq => ![1, 3, 4].includes(faq.id));
+        setFaqs(filteredFaqs);
+      });
   }, []);
 
   const toggleFaq = (id) => {

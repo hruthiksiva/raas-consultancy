@@ -61,10 +61,10 @@ const ServiceCard = ({ title, description, link }) => {
   return (
     <Link to={link} className="block h-full" onClick={handleClick}>
       <div className="rounded-lg md:rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 p-4 md:p-6 border border-gray-100 hover:border-blue-200 hover:transform hover:-translate-y-1 cursor-pointer group h-full flex flex-col" style={{ backgroundColor: '#182028' }}>
-        <div className="w-12 h-12 md:w-16 md:h-16 rounded-lg flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0" style={{ backgroundColor: 'rgba(182, 149, 103, 0.1)' }}>
+        <div className="w-12 h-12 md:w-16 md:h-16 flex items-center justify-center mb-3 md:mb-4 group-hover:scale-110 transition-transform duration-300 flex-shrink-0">
           {getServiceIcon(title)}
         </div>
-        <h3 className="text-sm md:text-base lg:text-xl font-semibold mb-2 md:mb-3 transition-colors duration-300 flex-shrink-0" style={{ color: '#B69567' }}>
+        <h3 className="text-sm md:text-base lg:text-xl font-semibold mb-2 md:mb-3 transition-colors duration-300 flex-shrink-0" style={{ color: '#FFFFFF' }}>
           {title}
         </h3>
         <p className="text-xs md:text-sm lg:text-base transition-colors duration-300 flex-grow" style={{ color: '#FFFFFF' }}>
