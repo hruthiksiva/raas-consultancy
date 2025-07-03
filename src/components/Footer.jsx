@@ -64,7 +64,7 @@ const Footer = () => {
                 <li key={link.path}>
                   <button
                     onClick={() => handleLinkClick(link.path)}
-                    className="text-gray-300 hover:text-white transition-colors duration-200 text-left text-xs md:text-sm"
+                    className="text-gray-300 hover:text-[#B69567] focus:text-[#B69567] transition-colors duration-200 text-left text-xs md:text-sm"
                   >
                     {link.label}
                   </button>
@@ -81,21 +81,22 @@ const Footer = () => {
               <div className="flex items-start space-x-3">
                 {/* Map Box */}
                 <div 
-                  className="w-7 h-7 md:w-10 md:h-10 bg-gray-600 rounded-lg flex items-center justify-center cursor-pointer hover:bg-gray-500 transition-colors duration-200 flex-shrink-0"
+                  className="w-8 h-8 md:w-10 md:h-10 bg-white/10 rounded-lg flex items-center justify-center cursor-pointer hover:bg-white/20 transition-colors duration-200 flex-shrink-0"
                   onClick={handleMapClick}
                   title="Click to open in Google Maps"
                 >
-                  <svg className="w-4 h-4 md:w-5 md:h-5 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  {/* Address Icon */}
+                  <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 21c-4.418-4.418-7-7.418-7-10a7 7 0 1114 0c0 2.582-2.582 5.582-7 10z" />
                     <circle cx="12" cy="11" r="3" fill="white" />
                   </svg>
                 </div>
-                
                 {/* Address */}
                 <div 
-                  className="text-gray-300 cursor-pointer hover:text-white transition-colors duration-200 text-xs md:text-sm"
+                  className="text-gray-300 cursor-pointer hover:text-[#B69567] focus:text-[#B69567] transition-colors duration-200 text-xs md:text-sm"
                   onClick={handleMapClick}
                   title="Click to open in Google Maps"
+                  tabIndex={0}
                 >
                   <p className="leading-relaxed">
                     3-220/1 Pagadamanu Street<br />
@@ -108,19 +109,30 @@ const Footer = () => {
               {/* Phone and Email */}
               <div className="space-y-1 md:space-y-2 text-gray-300">
                 <p className="flex items-center text-xs md:text-sm">
-                  <span className="mr-1 md:mr-2">📞</span>
+                  <span className="mr-2 w-8 h-8 md:w-10 md:h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                    {/* Phone Icon */}
+                    <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 5a2 2 0 012-2h2.28a2 2 0 011.94 1.515l.3 1.2a2 2 0 01-.45 1.95l-1.1 1.1a16.001 16.001 0 006.586 6.586l1.1-1.1a2 2 0 011.95-.45l1.2.3A2 2 0 0121 16.72V19a2 2 0 01-2 2h-1C7.163 21 3 16.837 3 12V5z" />
+                    </svg>
+                  </span>
                   <a 
                     href="tel:+918688196461" 
-                    className="hover:text-white transition-colors duration-200"
+                    className="hover:text-[#B69567] focus:text-[#B69567] transition-colors duration-200"
                   >
                     +91 86881 96461
                   </a>
                 </p>
                 <p className="flex items-center text-xs md:text-sm">
-                  <span className="mr-1 md:mr-2">📧</span>
+                  <span className="mr-2 w-8 h-8 md:w-10 md:h-10 bg-white/10 rounded-lg flex items-center justify-center">
+                    {/* Mail Icon */}
+                    <svg className="w-5 h-5 md:w-6 md:h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <rect x="3" y="5" width="18" height="14" rx="2" strokeWidth={2} stroke="currentColor" fill="none" />
+                      <path d="M3 7l9 6 9-6" strokeWidth={2} stroke="currentColor" fill="none" />
+                    </svg>
+                  </span>
                   <a 
                     href="mailto:info@raasconsulting.com" 
-                    className="hover:text-white transition-colors duration-200"
+                    className="hover:text-[#B69567] focus:text-[#B69567] transition-colors duration-200"
                   >
                     info@raasconsulting.com
                   </a>
@@ -139,13 +151,13 @@ const Footer = () => {
             <div className="flex space-x-3 md:space-x-6 mt-2 md:mt-0">
               <button
                 onClick={() => handleLinkClick('/privacy-policy')}
-                className="text-gray-300 hover:text-white text-xs md:text-sm transition-colors duration-200"
+                className="text-gray-300 hover:text-[#B69567] focus:text-[#B69567] text-xs md:text-sm transition-colors duration-200"
               >
                 Privacy Policy
               </button>
               <button
                 onClick={() => handleLinkClick('/terms-of-service')}
-                className="text-gray-300 hover:text-white text-xs md:text-sm transition-colors duration-200"
+                className="text-gray-300 hover:text-[#B69567] focus:text-[#B69567] text-xs md:text-sm transition-colors duration-200"
               >
                 Terms of Service
               </button>
