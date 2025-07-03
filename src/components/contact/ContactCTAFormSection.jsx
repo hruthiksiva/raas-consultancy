@@ -25,7 +25,7 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
             Get Your Free Consultation
           </h2>
           <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#FFFFFF' }}>
-            Ready to simplify your compliance? Fill out the form below and our team will get back to you within 24 hours.
+            {/* Ready to simplify your compliance? Fill out the form below and our team will get back to you within 24 hours. */}
           </p>
         </div>
         <div className="flex justify-center">

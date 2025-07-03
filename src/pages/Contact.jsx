@@ -30,7 +30,7 @@ const Contact = () => {
       {/* Hero Section */}
       <ContactHeroSection 
         title="CA-Led Startup Compliance & Tax Filing — Simple. Fast. Affordable."
-        subtitle="We help you stay compliant, save tax, and focus on scaling."
+        subtitle="Ready to simplify your compliance? Fill out the form below and our team will get back to you within 24 hours."
       />
       {/* CTA Form Section (immediately after hero) */}
       <ContactCTAFormSection 
