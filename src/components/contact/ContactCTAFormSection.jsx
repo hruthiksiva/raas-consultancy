@@ -1,4 +1,5 @@
 import React from 'react';
+import ContactFormImg from '../../assets/ContactForm.jpg';
 
 const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmitting, handleInputChange }) => {
   const handleSubmit = (e) => {
@@ -32,21 +33,21 @@ const ContactCTAFormSection = ({ formData, setFormData, isSubmitting, setIsSubmi
             {/* Image Placeholder */}
             <div className="w-full lg:w-1/2 flex justify-center">
               <div 
-                className="w-full max-w-lg aspect-square rounded-2xl shadow-xl flex items-center justify-center"
+                className="w-full max-w-lg rounded-2xl shadow-xl flex items-center justify-center"
                 style={{ 
                   backgroundColor: '#FFFFFF',
-                  minHeight: '400px'
+                  minHeight: '100%',
+                  height: '100%',
+                  aspectRatio: '1/1',
+                  padding: 0
                 }}
               >
-                <div className="text-center p-8">
-                  <div className="w-24 h-24 mx-auto mb-4 rounded-full bg-gray-200 flex items-center justify-center">
-                    <svg className="w-12 h-12 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4 16l4.586-4.586a2 2 0 012.828 0L16 16m-2-2l1.586-1.586a2 2 0 012.828 0L20 14m-6-6h.01M6 20h12a2 2 0 002-2V6a2 2 0 00-2-2H6a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                    </svg>
-                  </div>
-                  <p className="text-gray-500 text-lg font-medium">Image Placeholder</p>
-                  <p className="text-gray-400 text-sm mt-2">Add your image here</p>
-                </div>
+                <img 
+                  src={ContactFormImg} 
+                  alt="Contact Form" 
+                  className="w-full h-full object-cover rounded-2xl" 
+                  style={{ minHeight: '400px', height: '100%', objectFit: 'cover' }}
+                />
               </div>
             </div>
             

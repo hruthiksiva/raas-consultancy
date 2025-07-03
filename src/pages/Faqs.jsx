@@ -3,8 +3,9 @@ import FaqAccordion from '../components/faqs/FaqAccordion';
 import FaqsContactCTASection from '../components/faqs/FaqsContactCTASection';
 import FaqsAdditionalHelpSection from '../components/faqs/FaqsAdditionalHelpSection';
 import FinalCTASection from '../components/home/FinalCTASection';
+import FaqsSectionImg from '../assets/FaqsSection.jpg';
 
-const FAQ_IMAGE_PLACEHOLDER = 'https://via.placeholder.com/550x550?text=FAQ+Image';
+const FAQ_IMAGE_PLACEHOLDER = FaqsSectionImg;
 
 const Faqs = () => {
   return (
