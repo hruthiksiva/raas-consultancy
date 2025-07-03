@@ -1,5 +1,14 @@
 import { useState, useEffect } from 'react';
 import testimonialsData from '../data/testimonials.json';
+// You can replace this with a real image or import
+const placeholderImages = {
+  1: 'https://via.placeholder.com/300x300?text=Client+1',
+  2: 'https://via.placeholder.com/300x300?text=Client+2',
+  3: 'https://via.placeholder.com/300x300?text=Client+3',
+  4: 'https://via.placeholder.com/300x300?text=Client+4',
+  // Add more as needed, fallback below
+};
+const defaultPlaceholder = 'https://via.placeholder.com/300x300?text=Client';
 
 const Testimonials = ({ 
   title = "What Our Clients Say", 
@@ -21,6 +30,9 @@ const Testimonials = ({
     return () => clearInterval(interval);
   }, []);
 
+  const testimonial = testimonialsData[currentTestimonial];
+  const imageUrl = (testimonial && placeholderImages[testimonial.id]) || defaultPlaceholder;
+
   return (
     <section className={className} style={{ backgroundColor: '#232E3A', width: '100%', paddingTop: '4rem', paddingBottom: '4rem' }}>
       {showHeader && (
@@ -33,63 +45,37 @@ const Testimonials = ({
           </p>
         </div>
       )}
-      
-      <div className={showHeader ? "max-w-4xl mx-auto" : ""}>
-        <div className={showHeader ? "rounded-2xl p-8 md:p-12 relative overflow-hidden" : className} style={{ backgroundColor: '#B69567' }}>
+      <div className="max-w-4xl mx-auto flex flex-col md:flex-row items-center md:items-stretch gap-8 md:gap-12">
+        {/* Testimonial Card (Left) */}
+        <div className="flex-1 max-w-xl w-full md:w-[420px] h-[420px] rounded-2xl p-4 md:p-8 bg-[#B69567] relative overflow-hidden flex flex-col justify-end items-start">
           {/* Custom Header for Contact Page */}
           {showCustomHeader && (
-            <div className="text-center mb-8">
-              <h3 className="text-2xl font-bold mb-2" style={{ color: '#141A1F' }}>
+            <div className="mb-8">
+              <h3 className="text-xl font-bold mb-2 text-left" style={{ color: '#141A1F' }}>
                 {customHeaderTitle}
               </h3>
-              <p style={{ color: '#141A1F' }}>
+              <p className="text-left" style={{ color: '#141A1F' }}>
                 {customHeaderSubtitle}
               </p>
             </div>
           )}
-          {/* Testimonials Container */}
-          <div className="relative h-64 md:h-80">
-            {testimonialsData.map((testimonial, index) => (
-              <div
-                key={testimonial.id}
-                className={`absolute inset-0 transition-all duration-1000 ease-in-out ${
-                  index === currentTestimonial
-                    ? 'opacity-100 transform translate-x-0'
-                    : 'opacity-0 transform translate-x-full'
-                }`}
-              >
-                <div className="h-full flex flex-col justify-center">
-                  {/* Quote Icon */}
-                  <div className="mb-4" style={{ color: '#FFFEF9' }}>
-                    <svg className="w-8 h-8 mx-auto" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
-                    </svg>
-                  </div>
-
-                  {/* Testimonial Text */}
-                  <blockquote className="text-lg md:text-xl leading-relaxed mb-6 text-center italic" style={{ color: '#FFFEF9' }}>
-                    "{testimonial.text}"
-                  </blockquote>
-
-                  {/* Author Info */}
-                  <div className="text-center">
-                    <div className="w-12 h-12 rounded-full flex items-center justify-center mx-auto mb-3" style={{ backgroundColor: '#232E3A' }}>
-                      <span className="font-semibold text-lg" style={{ color: '#FFFEF9' }}>
-                        {testimonial.author.charAt(0)}
-                      </span>
-                    </div>
-                    <div>
-                      <p className="font-semibold" style={{ color: '#FFFEF9' }}>{testimonial.author}</p>
-                      <p className="text-sm" style={{ color: '#FFFEF9' }}>{testimonial.role}</p>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            ))}
+          {/* Quote Icon */}
+          <div className="mb-2" style={{ color: '#FFFEF9' }}>
+            <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+              <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z"/>
+            </svg>
           </div>
-
+          {/* Testimonial Text */}
+          <blockquote className="text-sm md:text-base leading-relaxed mb-3 text-left italic" style={{ color: '#FFFEF9' }}>
+            "{testimonial.text}"
+          </blockquote>
+          {/* Author Info */}
+          <div>
+            <p className="font-semibold text-xs md:text-sm text-left" style={{ color: '#FFFEF9' }}>{testimonial.author}</p>
+            <p className="text-xs md:text-xs text-left" style={{ color: '#FFFEF9' }}>{testimonial.role}</p>
+          </div>
           {/* Testimonial Indicators */}
-          <div className="flex justify-center space-x-2 mt-6">
+          <div className="flex justify-start space-x-2 mt-4">
             {testimonialsData.map((_, index) => (
               <div
                 key={index}
@@ -101,6 +87,15 @@ const Testimonials = ({
               />
             ))}
           </div>
+        </div>
+        {/* Image Placeholder (Right) */}
+        <div className="flex-1 max-w-xl w-full md:w-[420px] h-[420px] rounded-2xl flex items-center justify-center bg-gray-200 overflow-hidden" style={{ backgroundColor: '#e5e7eb' }}>
+          <img
+            src={imageUrl}
+            alt="Testimonial client"
+            className="object-cover w-full h-full rounded-2xl"
+            style={{ maxHeight: '420px', minHeight: '200px' }}
+          />
         </div>
       </div>
     </section>
