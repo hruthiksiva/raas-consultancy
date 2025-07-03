@@ -1,13 +1,19 @@
 import { useState, useEffect } from 'react';
 import testimonialsData from '../data/testimonials.json';
-// You can replace this with a real image or import
-const placeholderImages = {
-  1: 'https://via.placeholder.com/300x300?text=Client+1',
-  2: 'https://via.placeholder.com/300x300?text=Client+2',
-  3: 'https://via.placeholder.com/300x300?text=Client+3',
-  4: 'https://via.placeholder.com/300x300?text=Client+4',
-  // Add more as needed, fallback below
+import TestimonialRitika from '../assets/TestimonialRitika.jpg';
+import TestimonialAmit from '../assets/TestimonialAmit.jpg';
+import TestimonialSneha from '../assets/TestimonialSneha.jpg';
+import TestimonialRavindra from '../assets/TestimonialRavindra.jpg';
+import TestimonialNikhil from '../assets/TestimonialNikhil.jpg';
+
+const authorImages = {
+  'Ritika S.': TestimonialRitika,
+  'Amit K.': TestimonialAmit,
+  'Sneha P.': TestimonialSneha,
+  'Ravindra T.': TestimonialRavindra,
+  'Nikhil R.': TestimonialNikhil,
 };
+
 const defaultPlaceholder = 'https://via.placeholder.com/300x300?text=Client';
 
 const Testimonials = ({ 
@@ -31,7 +37,7 @@ const Testimonials = ({
   }, []);
 
   const testimonial = testimonialsData[currentTestimonial];
-  const imageUrl = (testimonial && placeholderImages[testimonial.id]) || defaultPlaceholder;
+  const imageUrl = (testimonial && authorImages[testimonial.author]) || defaultPlaceholder;
 
   return (
     <section className={className} style={{ backgroundColor: '#232E3A', width: '100%', paddingTop: '4rem', paddingBottom: '4rem' }}>
@@ -92,7 +98,7 @@ const Testimonials = ({
         <div className="flex-1 max-w-xl w-full md:w-[420px] h-[420px] rounded-2xl flex items-center justify-center bg-gray-200 overflow-hidden" style={{ backgroundColor: '#e5e7eb' }}>
           <img
             src={imageUrl}
-            alt="Testimonial client"
+            alt={`Testimonial client: ${testimonial.author}`}
             className="object-cover w-full h-full rounded-2xl"
             style={{ maxHeight: '420px', minHeight: '200px' }}
           />
