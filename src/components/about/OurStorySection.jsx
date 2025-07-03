@@ -15,7 +15,7 @@ const OurStorySection = () => (
         </div>
         <div className="relative">
           <div className="rounded-2xl p-4 md:p-8">
-            <div className="w-full h-48 sm:h-64 md:h-80 lg:h-[28rem] border border-[#2F3C4E] bg-white/20 rounded-lg flex items-center justify-center overflow-hidden">
+            <div className="w-full h-48 sm:h-64 md:h-80 lg:h-[28rem] bg-white/20 rounded-lg flex items-center justify-center overflow-hidden">
               <img src={OurStoryNewImg} alt="Our Story" className="object-cover object-top w-full h-full rounded-lg" />
             </div>
           </div>

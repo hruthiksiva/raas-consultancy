@@ -1,8 +1,12 @@
 import { useState, useEffect } from 'react';
 import { Link, useLocation, useNavigate } from 'react-router-dom';
 
+const PHONE_NUMBER = '+91 86881 96461';
+const MAIL_ID = 'info@raasconsulting.com';
+
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [showCallCard, setShowCallCard] = useState(false);
   const location = useLocation();
   const navigate = useNavigate();
 
@@ -59,6 +63,34 @@ const Navbar = () => {
     };
   }, [isMenuOpen]);
 
+  // Detect mobile view
+  const [isMobile, setIsMobile] = useState(false);
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+    handleResize();
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
+
+  // Close call card on route change
+  useEffect(() => {
+    setShowCallCard(false);
+  }, [location.pathname]);
+
+  // Close call card when clicking outside (desktop only)
+  useEffect(() => {
+    if (!showCallCard) return;
+    const handleClickOutside = (event) => {
+      if (!event.target.closest('#book-call-btn') && !event.target.closest('#call-card')) {
+        setShowCallCard(false);
+      }
+    };
+    document.addEventListener('mousedown', handleClickOutside);
+    return () => document.removeEventListener('mousedown', handleClickOutside);
+  }, [showCallCard]);
+
   return (
     <nav style={{ backgroundColor: '#182028' }} className="shadow-lg sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
@@ -79,12 +111,47 @@ const Navbar = () => {
               <button
                 key={item.path}
                 onClick={() => handleNavClick(item.path)}
-                className="px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:text-[#B69567]"
-                style={{ color: '#FFFFFF', backgroundColor: 'transparent' }}
+                className={`px-4 py-2 rounded-md text-sm font-medium transition-all duration-200 focus:outline-none focus:text-[#B69567] hover:text-[#B69567] ${isActive(item.path) ? 'text-[#B69567]' : 'text-white'}`}
+                style={{ backgroundColor: 'transparent' }}
               >
                 {item.label}
               </button>
             ))}
+            {/* Book a call button */}
+            <div className="relative ml-2">
+              <button
+                id="book-call-btn"
+                className="px-5 py-2 rounded-full font-semibold text-sm transition-all duration-200 shadow hover:opacity-90 focus:outline-none focus:text-[#B69567] hover:text-[#B69567]"
+                style={{ backgroundColor: '#FFFFFF', color: '#182028', borderRadius: '9999px' }}
+                onClick={() => {
+                  if (isMobile) {
+                    window.location.href = `tel:${PHONE_NUMBER.replace(/\s+/g, '')}`;
+                  } else {
+                    setShowCallCard((prev) => !prev);
+                  }
+                }}
+              >
+                Book a call
+              </button>
+              {/* Call Card for Desktop */}
+              {!isMobile && showCallCard && (
+                <div
+                  id="call-card"
+                  className="absolute right-0 mt-2 w-72 bg-white rounded-xl shadow-lg p-6 z-50 flex flex-col items-center"
+                  style={{ minWidth: '250px' }}
+                >
+                  <span className="block text-lg font-bold mb-2" style={{ color: '#182028' }}>Contact Us</span>
+                  <div className="w-full flex flex-col items-center mb-2">
+                    <span className="text-base font-medium" style={{ color: '#182028' }}>Phone:</span>
+                    <a href={`tel:${PHONE_NUMBER.replace(/\s+/g, '')}`} className="text-base font-semibold underline" style={{ color: '#182028' }}>{PHONE_NUMBER}</a>
+                  </div>
+                  <div className="w-full flex flex-col items-center">
+                    <span className="text-base font-medium" style={{ color: '#182028' }}>Email:</span>
+                    <a href={`mailto:${MAIL_ID}`} className="text-base font-semibold underline" style={{ color: '#182028' }}>{MAIL_ID}</a>
+                  </div>
+                </div>
+              )}
+            </div>
           </div>
 
           {/* Mobile menu button */}
@@ -131,12 +198,20 @@ const Navbar = () => {
             <button
               key={item.path}
               onClick={() => handleNavClick(item.path)}
-              className="block w-full text-left px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 hover:text-[#B69567]"
-              style={{ color: '#FFFFFF', backgroundColor: 'transparent' }}
+              className={`block w-full text-left px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 focus:outline-none focus:text-[#B69567] hover:text-[#B69567] ${isActive(item.path) ? 'text-[#B69567]' : 'text-white'}`}
+              style={{ backgroundColor: 'transparent' }}
             >
               {item.label}
             </button>
           ))}
+          {/* Book a call button inside mobile dropdown */}
+          <button
+            className="block w-full text-left px-3 py-2 mt-2 rounded-full font-semibold text-sm transition-all duration-200 shadow focus:outline-none focus:text-[#B69567] hover:text-[#B69567]"
+            style={{ backgroundColor: '#FFFFFF', color: '#182028', borderRadius: '9999px' }}
+            onClick={() => window.location.href = `tel:${PHONE_NUMBER.replace(/\s+/g, '')}`}
+          >
+            Book a call
+          </button>
         </div>
       </div>
     </nav>

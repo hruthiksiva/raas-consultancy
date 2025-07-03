@@ -29,7 +29,7 @@ const WhyChooseUsSection = () => {
   }, []);
 
   return (
-    <section className="py-10 md:py-16 lg:py-24" style={{ backgroundColor: '#FEFFFF' }}>
+    <section className="py-10 md:py-16 lg:py-24" style={{ backgroundColor: '#EAE9E5' }}>
       <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
         <div className="text-center mb-10 md:mb-16">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4" style={{ color: '#2F3C4E' }}>
