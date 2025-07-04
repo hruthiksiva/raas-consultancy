@@ -20,10 +20,10 @@ const Blogs = () => {
   return (
     <div className="min-h-screen" style={{ backgroundColor: '#1F2937' }}>
       {/* Hero Section */}
-      <BlogsHeroSection 
+      {/* <BlogsHeroSection 
         title="Blogs" 
         // subtitle="Read our latest insights and articles"
-      />
+      /> */}
       {/* Blog Listing Section */}
       <BlogsListingSection blogs={blogs} onBlogClick={handleBlogClick} />
       {/* Blog CTA Section */}

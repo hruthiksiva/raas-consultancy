@@ -31,12 +31,12 @@ const Faqs = () => {
           {/* FAQs Flex Layout */}
           <div className="flex flex-col md:flex-row gap-8 md:gap-12 items-start">
             {/* Image Placeholder (Left) */}
-            <div className="flex-shrink-0 w-full md:w-[550px] h-[260px] md:h-[550px] rounded-2xl bg-gray-200 overflow-hidden mb-6 md:mb-0 md:mr-0 md:ml-0 md:self-start" style={{ backgroundColor: '#e5e7eb', alignSelf: 'flex-start' }}>
+            <div className="flex-shrink-0 w-full md:w-[450px] h-[200px] md:h-[450px] rounded-2xl bg-gray-200 overflow-hidden mb-6 md:mb-0 md:mr-0 md:ml-0 md:self-start" style={{ backgroundColor: '#e5e7eb', alignSelf: 'flex-start' }}>
               <img
                 src={FAQ_IMAGE_PLACEHOLDER}
                 alt="FAQ visual"
                 className="object-cover w-full h-full rounded-2xl"
-                style={{ maxHeight: '550px', minHeight: '200px' }}
+                style={{ maxHeight: '450px', minHeight: '150px' }}
               />
             </div>
             {/* FAQ Accordion (Right) */}
