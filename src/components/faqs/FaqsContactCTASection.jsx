@@ -9,7 +9,7 @@ const FaqsContactCTASection = () => (
       </p>
       <div className="flex justify-center">
         <a 
-          href="#contact" 
+          href="/contact#contact-top" 
           className="inline-block px-6 md:px-8 py-2 md:py-3 rounded-lg font-semibold text-sm md:text-base transition-colors duration-300 shadow-lg hover:shadow-xl transform hover:-translate-y-1"
           style={{ backgroundColor: '#B69567', color: '#FFFFFF' }}
         >
