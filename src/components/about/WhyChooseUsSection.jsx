@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React from 'react';
 import WhyChooseUsCard from '../WhyChooseUsCard';
+import whyChooseUsData from '../../data/whyChooseUs.json';
 
 const icons = [
   // 1. Graduation cap
@@ -20,32 +21,24 @@ const growthIcon = (
 );
 
 const WhyChooseUsSection = () => {
-  const [cards, setCards] = useState([]);
-
-  useEffect(() => {
-    fetch('/src/data/whyChooseUs.json')
-      .then((res) => res.json())
-      .then((data) => setCards(data));
-  }, []);
-
   return (
-    <section className="py-10 md:py-16 lg:py-24" style={{ backgroundColor: '#EAE9E5' }}>
-      <div className="max-w-7xl mx-auto px-2 sm:px-4 md:px-6 lg:px-8">
-        <div className="text-center mb-10 md:mb-16">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold mb-2 md:mb-4" style={{ color: '#2F3C4E' }}>
+    <section className="py-8 md:py-16 lg:py-24" style={{ backgroundColor: '#FFFFFF' }}>
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="text-center mb-8 md:mb-12 lg:mb-16">
+          <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4" style={{ color: '#141A1F' }}>
             Why Choose Us
           </h2>
-          <p className="text-base sm:text-lg max-w-2xl mx-auto" style={{ color: '#2F3C4E' }}>
-            We combine professional expertise with personalized service to deliver exceptional results
+          <p className="text-sm sm:text-base md:text-lg max-w-2xl mx-auto" style={{ color: '#141A1F' }}>
+            We combine expertise with personalized service to deliver exceptional results
           </p>
         </div>
-        <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 md:gap-8">
-          {cards.map((card, idx) => (
+        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+          {whyChooseUsData.map(item => (
             <WhyChooseUsCard
-              key={card.id}
-              title={card.title}
-              description={card.description}
-              icon={icons[idx]}
+              key={item.id}
+              title={item.title}
+              description={item.description}
+              icon={item.icon}
             />
           ))}
         </div>

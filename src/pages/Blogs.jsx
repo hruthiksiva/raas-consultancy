@@ -1,17 +1,10 @@
-import { useEffect, useState } from 'react';
+import React from 'react';
 import BlogsHeroSection from '../components/blogs/BlogsHeroSection';
 import BlogsListingSection from '../components/blogs/BlogsListingSection';
 import BlogCTA from '../components/blogs/BlogCTA';
+import blogsData from '../data/blogs.json';
 
 const Blogs = () => {
-  const [blogs, setBlogs] = useState([]);
-
-  useEffect(() => {
-    fetch('/src/data/blogs.json')
-      .then((res) => res.json())
-      .then((data) => setBlogs(data));
-  }, []);
-
   const handleBlogClick = (slug) => {
     // Navigate to blog detail page
     window.location.href = `/blog/${slug}`;
@@ -25,7 +18,7 @@ const Blogs = () => {
         // subtitle="Read our latest insights and articles"
       /> */}
       {/* Blog Listing Section */}
-      <BlogsListingSection blogs={blogs} onBlogClick={handleBlogClick} />
+      <BlogsListingSection blogs={blogsData} onBlogClick={handleBlogClick} />
       {/* Blog CTA Section */}
       <BlogCTA />
     </div>
