@@ -22,7 +22,7 @@ const growthIcon = (
 
 const WhyChooseUsSection = () => {
   return (
-    <section className="py-8 md:py-16 lg:py-24" style={{ backgroundColor: '#FFFFFF' }}>
+    <section className="py-8 md:py-16 lg:py-24" style={{ backgroundColor: '#EAE9E5' }}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-8 md:mb-12 lg:mb-16">
           <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold mb-3 md:mb-4" style={{ color: '#141A1F' }}>
@@ -32,7 +32,7 @@ const WhyChooseUsSection = () => {
             We combine expertise with personalized service to deliver exceptional results
           </p>
         </div>
-        <div className="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 lg:gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-3 gap-3 sm:gap-4 md:gap-6 lg:gap-8">
           {whyChooseUsData.map(item => (
             <WhyChooseUsCard
               key={item.id}

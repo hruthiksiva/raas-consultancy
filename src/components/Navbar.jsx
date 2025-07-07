@@ -192,26 +192,36 @@ const Navbar = () => {
       </div>
 
       {/* Mobile Navigation */}
-      <div className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`} style={{ backgroundColor: '#182028' }}>
-        <div className="px-1 pt-1 pb-2 space-y-1 sm:px-2">
-          {navItems.map((item) => (
+      <div
+        className={`${isMenuOpen ? 'block' : 'hidden'} md:hidden`}
+        style={{ backgroundColor: '#182028', boxShadow: '0 8px 24px rgba(0,0,0,0.18)' }}
+      >
+        <div
+          className="mx-2 my-3 rounded-2xl overflow-hidden shadow-lg"
+          style={{ backgroundColor: '#232E3A', maxHeight: '80vh', overflowY: 'auto' }}
+        >
+          <div className="flex flex-col gap-2 py-3 px-2">
+            {navItems.map((item, idx) => (
+              <button
+                key={item.path}
+                onClick={() => handleNavClick(item.path)}
+                className={`block w-full text-left px-4 py-3 rounded-lg text-base font-medium transition-all duration-200 focus:outline-none focus:text-[#B69567] hover:text-[#B69567] ${isActive(item.path) ? 'text-[#B69567]' : 'text-white'}`}
+                style={{ backgroundColor: 'transparent' }}
+              >
+                {item.label}
+              </button>
+            ))}
+            {/* Divider */}
+            <div className="my-2 border-t border-gray-700" />
+            {/* Book a call button inside mobile dropdown */}
             <button
-              key={item.path}
-              onClick={() => handleNavClick(item.path)}
-              className={`block w-full text-left px-3 py-2 rounded-md text-sm font-medium transition-all duration-200 focus:outline-none focus:text-[#B69567] hover:text-[#B69567] ${isActive(item.path) ? 'text-[#B69567]' : 'text-white'}`}
-              style={{ backgroundColor: 'transparent' }}
+              className="block w-full text-center px-4 py-3 mt-1 rounded-full font-semibold text-base transition-all duration-200 shadow focus:outline-none focus:text-[#B69567] hover:text-[#B69567]"
+              style={{ backgroundColor: '#FFFFFF', color: '#182028', borderRadius: '9999px' }}
+              onClick={() => window.location.href = `tel:${PHONE_NUMBER.replace(/\s+/g, '')}`}
             >
-              {item.label}
+              Book a call
             </button>
-          ))}
-          {/* Book a call button inside mobile dropdown */}
-          <button
-            className="block w-full text-left px-3 py-2 mt-2 rounded-full font-semibold text-sm transition-all duration-200 shadow focus:outline-none focus:text-[#B69567] hover:text-[#B69567]"
-            style={{ backgroundColor: '#FFFFFF', color: '#182028', borderRadius: '9999px' }}
-            onClick={() => window.location.href = `tel:${PHONE_NUMBER.replace(/\s+/g, '')}`}
-          >
-            Book a call
-          </button>
+          </div>
         </div>
       </div>
     </nav>
