@@ -29,7 +29,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-4 md:gap-8">
           {/* Company Info */}
           <div className="col-span-1 md:col-span-2">
-            <h3 className="text-base md:text-xl font-bold mb-2 md:mb-4">RAAS Consulting</h3>
+            <h3 className="text-base md:text-xl font-bold mb-2 md:mb-4">RAAS Consultancy</h3>
             <p className="text-gray-300 text-xs md:text-sm mb-2 md:mb-4">
               Your trusted partner for business solutions and growth. We provide comprehensive 
               consulting services to help your business thrive in today's competitive market.
@@ -131,10 +131,10 @@ const Footer = () => {
                     </svg>
                   </span>
                   <a 
-                    href="mailto:info@raasconsulting.com" 
+                    href="mailto:raasconsultancy.ca@gmail.com" 
                     className="hover:text-[#B69567] focus:text-[#B69567] transition-colors duration-200"
                   >
-                    info@raasconsulting.com
+                    raasconsultancy.ca@gmail.com
                   </a>
                 </p>
               </div>

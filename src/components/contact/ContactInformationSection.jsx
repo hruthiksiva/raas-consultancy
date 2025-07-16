@@ -47,8 +47,8 @@ const ContactInformationSection = () => (
               </div>
               <div>
                 <h3 className="font-semibold mb-1 text-sm sm:text-base" style={{ color: '#FFFFFF' }}>Email</h3>
-                <a href="mailto:info@raasconsulting.com" className="text-xs sm:text-base" style={{ color: '#FFFFFF' }}>
-                  info@raasconsulting.com
+                <a href="mailto:raasconsultancy.ca@gmail.com" className="text-xs sm:text-base" style={{ color: '#FFFFFF' }}>
+                raasconsultancy.ca@gmail.com
                 </a>
               </div>
             </div>

@@ -101,7 +101,7 @@ const Navbar = () => {
               onClick={() => handleNavClick('/')}
               className="flex-shrink-0 flex items-center hover:opacity-80 transition-opacity duration-200"
             >
-              <span className="text-lg md:text-xl font-bold" style={{ color: '#FFFFFF' }}>RAAS Consulting</span>
+              <span className="text-lg md:text-xl font-bold" style={{ color: '#FFFFFF' }}>RAAS Consultancy</span>
             </button>
           </div>
 

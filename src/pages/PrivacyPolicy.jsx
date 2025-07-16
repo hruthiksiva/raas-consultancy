@@ -153,8 +153,8 @@ const PrivacyPolicy = () => {
               <div className="rounded-lg p-6 space-y-3" style={{ background: 'none', border: 'none' }}>
                 <p className="flex items-center" style={{ color: '#FFFFFF' }}>
                   <span className="mr-3">📧</span>
-                  <a href="mailto:info@raazconsultancy.in" style={{ color: '#FFFFFF', textDecoration: 'underline' }}>
-                    info@raazconsultancy.in
+                  <a href="mailto:raasconsultancy.ca@gmail.com" style={{ color: '#FFFFFF', textDecoration: 'underline' }}>
+                  raasconsultancy.ca@gmail.com
                   </a>
                 </p>
                 <p className="flex items-start" style={{ color: '#FFFFFF' }}>

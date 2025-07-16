@@ -10,7 +10,7 @@ const OurStorySection = () => (
             Our Story
           </h2>
           <p className="text-base sm:text-lg leading-relaxed" style={{ color: '#2F3C4E' }}>
-            Raaz Consultancy emerged to bridge the gap between financial expertise and human understanding. Founded by Chartered professionals with business-first insight, we blend compliance with empathy. For us, every client is not just a file — it's a founder, a dream, a journey. That belief powers how we serve.
+            RAAS Consultancy emerged to bridge the gap between financial expertise and human understanding. Founded by Chartered professionals with business-first insight, we blend compliance with empathy. For us, every client is not just a file — it's a founder, a dream, a journey. That belief powers how we serve.
           </p>
         </div>
         <div className="relative">

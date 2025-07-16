@@ -10,7 +10,7 @@ const WhoWeAreSection = () => (
             Simplifying Finance. Empowering Growth.
           </h2>
           <p className="text-sm sm:text-base md:text-lg leading-relaxed" style={{ color: '#FFFFFF' }}>
-            Raaz Consultancy was founded to challenge traditional norms of accounting. Where most saw numbers, we saw narratives. Trust, speed, and simplicity can go hand-in-hand with compliance. We don't just file; we fuel your clarity, growth, and peace of mind.
+            Raas Consultancy was founded to challenge traditional norms of accounting. Where most saw numbers, we saw narratives. Trust, speed, and simplicity can go hand in hand with compliance. We don't just file; we fuel your clarity, growth, and peace of mind.
           </p>
         </div>
         <div className="relative">
