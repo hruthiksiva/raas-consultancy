@@ -57,9 +57,9 @@ const ContactInformationSection = () => (
         {/* Map */}
         <div className="w-full mt-8 md:mt-0 flex flex-col items-center justify-center">
           <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3884.4019732047827!2d79.09235307484552!3d13.200060987136741!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bad5c117cc6a117%3A0x14bb8217fb5145a!2s3-467%2C%20Pagadaman%20St%2C%20Sanjeev%20Gandhi%20Nagar%2C%20Greamspet%2C%20Chittoor%2C%20Andhra%20Pradesh%20517002!5e0!3m2!1sen!2sin!4v1751520753890!5m2!1sen!2sin"
+            src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d3884.375988546932!2d79.095278!3d13.201694999999999!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMTPCsDEyJzA2LjEiTiA3OcKwMDUnNDMuMCJF!5e0!3m2!1sen!2sin!4v1752673537612!5m2!1sen!2sin"
             width="100%"
-            height="350"
+            height="450"
             style={{ border: 0, borderRadius: '12px' }}
             allowFullScreen=""
             loading="lazy"

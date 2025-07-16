@@ -20,7 +20,7 @@ const Footer = () => {
   };
 
   const handleMapClick = () => {
-    window.open('https://maps.app.goo.gl/25GeRGT7Pt1iKEE58', '_blank');
+    window.open('https://maps.app.goo.gl/CciCzr9aGPLE5JWn9', '_blank');
   };
 
   return (
